@@ -26,15 +26,27 @@
   </section>
 
   <main class="container">
-    <form class="contact-form">
+    <p id="form-success" class="form-success" hidden>
+      ✅ Merci ! Votre message a bien été envoyé. Nous vous répondrons rapidement.
+    </p>
+
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <!-- Clé d'accès Web3Forms (publique par conception) -->
+      <input type="hidden" name="access_key" value="5fd57101-7c00-473c-872d-8d530903e6a2" />
+      <input type="hidden" name="subject" value="Nouveau message — Aéro Réglementation" />
+      <input type="hidden" name="from_name" value="Aéro Réglementation" />
+      <input type="hidden" name="redirect" value="https://cedriccathelain007-ui.github.io/test-antigravity/contact.html?envoye=1" />
+      <!-- Piège anti-robots (invisible pour les humains) -->
+      <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" />
+
       <label for="nom">Nom</label>
-      <input type="text" id="nom" placeholder="Votre nom" required />
+      <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
 
       <label for="email">Email</label>
-      <input type="email" id="email" placeholder="votre@email.com" required />
+      <input type="email" id="email" name="email" placeholder="votre@email.com" required />
 
       <label for="message">Message</label>
-      <textarea id="message" rows="6" placeholder="Votre message..." required></textarea>
+      <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
 
       <button type="submit" class="btn">Envoyer</button>
     </form>
@@ -43,6 +55,15 @@
   <footer>
     <p>© 2026 Aéro Réglementation — Tous droits réservés</p>
   </footer>
+
+  <script>
+    if (new URLSearchParams(window.location.search).get("envoye") === "1") {
+      var ok = document.getElementById("form-success");
+      if (ok) ok.hidden = false;
+      var form = document.querySelector(".contact-form");
+      if (form) form.hidden = true;
+    }
+  </script>
 
 </body>
 </html>
