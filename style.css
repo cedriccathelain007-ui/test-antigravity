@@ -235,6 +235,24 @@ nav a.active {
 }
 
 /* =============================================
+   FORMULAIRE — ÉTATS
+   ============================================= */
+.contact-form .botcheck {
+  display: none;
+}
+
+.form-success {
+  max-width: 600px;
+  background: #e8f0fe;
+  color: #1560bd;
+  border-left: 4px solid #4fa3e0;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* =============================================
    FOOTER
    ============================================= */
 footer {
