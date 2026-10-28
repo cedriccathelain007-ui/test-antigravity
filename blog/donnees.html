@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Données ouvertes — Aéro Réglementation</title>
+  <meta name="description" content="Les jeux de données open data de data.gouv.fr sur la filière aéronautique et la production, classés par thématique." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">✈️ Aéro Réglementation</div>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="articles.html">Articles</a>
+        <a href="donnees.html" class="active">Données</a>
+        <a href="apropos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <h1>Données ouvertes : aéronautique &amp; production</h1>
+    <p>Les jeux de données publics de data.gouv.fr utiles pour comprendre la filière, classés par thématique.</p>
+  </section>
+
+  <main class="container">
+
+    <div class="data-intro">
+      <p>La réglementation aéronautique se lit dans les textes. La filière, elle, se lit dans les chiffres : structure des entreprises, tensions de recrutement, contraintes environnementales, cycles de trafic. Ces données existent déjà, en accès libre, sur <strong>data.gouv.fr</strong> — mais elles sont dispersées entre une vingtaine de producteurs.</p>
+      <p>Cette page les regroupe par thématique, avec leur producteur, leur apport réel et leurs limites. Aucune donnée n'est hébergée ici : chaque tableau renvoie vers la fiche officielle du jeu de données, où se trouvent la licence, l'historique des versions et le formulaire de signalement.</p>
+    </div>
+
+    <div class="callout">
+      <h3>Comment lire cette page</h3>
+      <p><strong>Donnée directe</strong> : le jeu de données porte précisément sur le sujet annoncé.</p>
+      <p><strong>Donnée indirecte</strong> : le sujet se reconstitue par recoupement (code d'activité, territoire, indicateur économique).</p>
+      <p><strong>À vérifier</strong> : la donnée existe mais son producteur la signale obsolète, ou son périmètre ne couvre pas le sujet.</p>
+    </div>
+
+    <!-- CHIFFRES CLÉS -->
+    <section class="theme-block">
+      <h2>Chiffres clés — édition 2026</h2>
+      <p>Trois indicateurs calculés directement dans les fichiers CSV publiés par la DGAC, sur l'ensemble des aéroports français. Les définitions exactes et les limites de périmètre sont précisées sous chaque chiffre.</p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">104,9 M</div>
+          <div class="stat-label">passagers au départ des aéroports français en 2025</div>
+          <div class="stat-note">Série ASP-APT, somme des départs mensuels. Périmètre : 990 aéroports publiés, les plus petits étant regroupés.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">+2,2 %</div>
+          <div class="stat-label">évolution du trafic passagers entre 2024 et 2025</div>
+          <div class="stat-note">Mais −1,8 % par rapport à 2019. La reprise est réelle, le niveau d'avant-crise n'est pas retrouvé.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">102,5</div>
+          <div class="stat-label">indice des prix du transport aérien de passagers en 2025</div>
+          <div class="stat-note">Base 100 en 2023. L'indice était à 76,7 en 2019, soit +33,6 % en six ans (DGAC, IPTAP).</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THÈME 1 -->
+    <section class="theme-block">
+      <h2>1. Structure et poids économique de la production</h2>
+      <p>Pour situer un site de production dans la filière, il faut d'abord compter les entreprises, les effectifs et la valeur ajoutée. La statistique publique ne raisonne pas en « filière aéronautique » mais en activité économique : c'est le détour nécessaire.</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Jeu de données</th>
+            <th>Ce qu'il apporte</th>
+            <th>Statut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://www.data.gouv.fr/datasets/statistiques-annuelles-d-entreprises-esane">Statistiques annuelles d'entreprises (Ésane)</a>
+              <span class="producer">Insee — licence fr-lo, mise à jour annuelle</span>
+            </td>
+            <td>Photographie annuelle des unités légales : chiffre d'affaires, effectifs, exportations, par secteur d'activité. Permet d'isoler la construction aéronautique et spatiale.</td>
+            <td><span class="badge badge-warn">Indirecte</span></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://www.data.gouv.fr/datasets/caracteristiques-comptables-financieres-et-demploi-des-entreprises-en-2022">Caractéristiques comptables, financières et d'emploi des entreprises</a>
+              <span class="producer">2022 — approche sectorielle</span>
+            </td>
+            <td>Lecture financière complémentaire à Ésane, utile pour comparer les modèles économiques des industriels.</td>
+            <td><span class="badge badge-warn">Indirecte</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout alert">
+        <h3>Une limite de fraîcheur à connaître</h3>
+        <p>Bien que la fiche Ésane affiche une mise à jour récente, les <strong>fichiers disponibles s'arrêtent à l'exercice 2018</strong>. Aucun chiffre de production aéronautique récent ne peut donc en être tiré : la donnée est utile pour une structure de référence, pas pour une analyse conjoncturelle.</p>
+      </div>
+    </section>
+
+    <!-- THÈME 2 -->
+    <section class="theme-block">
+      <h2>2. Emploi, recrutement et compétences</h2>
+      <p>Les métiers de la production aéronautique — usinage, composite, chaudronnerie, contrôle qualité — sont parmi les plus tendus de l'industrie. Les enquêtes publiques mesurent cette tension par bassin d'emploi.</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Jeu de données</th>
+            <th>Ce qu'il apporte</th>
+            <th>Statut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://www.data.gouv.fr/datasets/enquete-besoins-en-main-doeuvre-bmo">Enquête Besoins en Main d'Œuvre (BMO)</a>
+              <span class="producer">France Travail — 12 ressources</span>
+            </td>
+            <td>Intentions d'embauche par métier, par bassin d'emploi, avec un indicateur de difficulté de recrutement. Base directe pour une analyse de tension locale.</td>
+            <td><span class="badge badge-ok">Directe</span></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://www.data.gouv.fr/datasets/diagnostic-territorial-emplois-competences-par-bassins-demploi">Diagnostics territoriaux emplois-compétences</a>
+              <span class="producer">Région Bourgogne-Franche-Comté</span>
+            </td>
+            <td>Exemple de méthode d'analyse territoriale transposable à d'autres régions.</td>
+            <td><span class="badge badge-warn">Indirecte</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- THÈME 3 -->
+    <section class="theme-block">
+      <h2>3. Sécurité industrielle et environnement</h2>
+      <p>Un atelier aéronautique est presque toujours une installation classée : solvants, bains de traitement de surface, stockage de matières dangereuses. Le régime ICPE conditionne directement l'exploitation.</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Jeu de données</th>
+            <th>Ce qu'il apporte</th>
+            <th>Statut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://www.data.gouv.fr/datasets/installations-classees-pour-la-protection-de-lenvironnement-icpe-france-metropolitaine-et-drom-3">Installations classées (ICPE) — France métropolitaine et DROM</a>
+              <span class="producer">BRGM — données qualifiées HVD</span>
+            </td>
+            <td>Localisation, régime et statut d'exploitation des sites industriels. Permet de cartographier les contraintes d'un bassin de production.</td>
+            <td><span class="badge badge-ok">Directe</span></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://www.data.gouv.fr/datasets/zones-deffets-du-diri-dhexcel-composites-a-bouguenais-en-loire-atlantique-1">Zones d'effets du DIRI d'Hexcel Composites — Bouguenais</a>
+              <span class="producer">DREAL Pays de la Loire</span>
+            </td>
+            <td>Cas concret : le périmètre de risque d'un site de production de matériaux composites.</td>
+            <td><span class="badge badge-ok">Directe</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- THÈME 4 -->
+    <section class="theme-block">
+      <h2>4. Conjoncture : lire la demande avant de régler une ligne</h2>
+      <p>Le trafic aérien est un indicateur avancé de la charge des chaînes de production. Sur les programmes longs, la commande précède la fabrication de plusieurs années : savoir où l'on se situe dans le cycle change les priorités d'un site.</p>
+      <p>Lecture 2025 : le trafic repart (+2,2 % sur un an) mais reste sous son niveau de 2019, tandis que les prix ont progressé de plus d'un tiers depuis 2019. Un secteur qui retrouve des volumes sans retrouver sa structure de coûts d'avant-crise — un contexte qui pèse directement sur les budgets industriels.</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Jeu de données</th>
+            <th>Ce qu'il apporte</th>
+            <th>Statut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://www.data.gouv.fr/datasets/trafic-aerien-commercial-mensuel-francais-par-paire-daeroports-par-sens-depuis-1990">Trafic aérien commercial mensuel français</a>
+              <span class="producer">DGAC — par paire d'aéroports, depuis 1990</span>
+            </td>
+            <td>Séries longues et mensuelles : la meilleure approximation publique de la demande de transport.</td>
+            <td><span class="badge badge-ok">Directe</span></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://www.data.gouv.fr/datasets/indices-des-prix-du-transport-aerien-de-passagers">Indices des prix du transport aérien de passagers (IPTAP)</a>
+              <span class="producer">DGAC</span>
+            </td>
+            <td>Évolution tarifaire, utile pour corréler offre, demande et capacité.</td>
+            <td><span class="badge badge-ok">Directe</span></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://www.data.gouv.fr/datasets/obligations-de-service-public">Obligations de service public</a>
+              <span class="producer">Ministère de la Transition écologique</span>
+            </td>
+            <td>Liaisons aériennes encadrées : un pan de la demande qui ne dépend pas du marché.</td>
+            <td><span class="badge badge-ok">Directe</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- THÈME 5 -->
+    <section class="theme-block">
+      <h2>5. Foncier et contraintes réglementaires locales</h2>
+      <p>À proximité d'une plateforme aérodrome, l'urbanisation est encadrée : hauteurs constructibles, zones de bruit, servitudes. Un projet d'extension d'atelier s'y heurte vite.</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Jeu de données</th>
+            <th>Ce qu'il apporte</th>
+            <th>Statut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://www.data.gouv.fr/datasets/sup-t5-servitudes-aeronautiques-de-degagement-en-meurthe-et-moselle-assiette">Servitudes aéronautiques de dégagement (T5)</a>
+              <span class="producer">DDT — déclinaisons départementales</span>
+            </td>
+            <td>Emprises et hauteurs opposables autour des aérodromes. Existe département par département.</td>
+            <td><span class="badge badge-ok">Directe</span></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://www.data.gouv.fr/datasets/zonage-des-plan-dexposition-au-bruit-peb">Zonage des Plans d'Exposition au Bruit (PEB)</a>
+              <span class="producer">Jeu national</span>
+            </td>
+            <td>Zonage réglementaire du bruit autour des plateformes.</td>
+            <td><span class="badge badge-warn">À vérifier — signalé obsolète</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- THÈME 6 -->
+    <section class="theme-block">
+      <h2>6. Analyse sectorielle de référence</h2>
+      <p>Pour prendre du recul sur le modèle économique du transport aérien et le rôle de l'État dans sa régulation.</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Jeu de données</th>
+            <th>Ce qu'il apporte</th>
+            <th>Statut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://www.data.gouv.fr/datasets/l-etat-et-la-competitivite-du-transport-aerien-un-role-complexe-une-strategie-a-elaborer-2">L'État et la compétitivité du transport aérien</a>
+              <span class="producer">Cour des comptes</span>
+            </td>
+            <td>Analyse de la régulation, de la fiscalité et de la compétitivité du secteur en France.</td>
+            <td><span class="badge badge-ok">Directe</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CE QUI MANQUE -->
+    <section class="theme-block">
+      <h2>Ce que l'open data ne dit pas</h2>
+      <p>Trois angles morts à connaître avant de citer un chiffre en réunion ou en entretien.</p>
+      <div class="callout alert">
+        <h3>Qualité et certification</h3>
+        <p>Aucun jeu de données data.gouv ne couvre les référentiels qualité aéronautiques, la navigabilité ou la certification. Ces contenus relèvent de <strong>Légifrance</strong> et de l'<strong>AESA</strong>. Ne citez jamais un numéro de norme sans l'avoir vérifié à la source.</p>
+      </div>
+      <div class="callout alert">
+        <h3>Chaîne de sous-traitance</h3>
+        <p>Il n'existe pas de jeu de données public reliant donneurs d'ordre et sous-traitants (rangs 1, 2, 3). L'analyse de filière reste à reconstituer manuellement.</p>
+      </div>
+      <div class="callout alert">
+        <h3>Procédés et matériaux</h3>
+        <p>Les données sur les composites, l'usinage ou les procédés spéciaux ne sont pas publiées en open data : elles sont industrielles et confidentielles.</p>
+      </div>
+    </section>
+
+    <p class="source-note">Inventaire réalisé le 28 octobre 2026 à partir du catalogue data.gouv.fr. Les liens renvoient aux fiches officielles ; vérifiez systématiquement la licence, la date de dernière mise à jour et le périmètre avant réutilisation.</p>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Aéro Réglementation — Tous droits réservés</p>
+  </footer>
+
+</body>
+</html>
