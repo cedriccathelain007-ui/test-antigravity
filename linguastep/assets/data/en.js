@@ -343,9 +343,9 @@ window.COURSES.en = {
       {
         id: "en-t-b2-10", skill: "vocab",
         q: "The board will ___ the proposal next week.",
-        options: ["discuss", "discuss about", "debate on", "argue"],
+        options: ["discuss", "discuss about", "discuss on", "discuss over"],
         a: 0,
-        why: "Discuss + objet direct, sans about : c'est un faux ami de « discuter de »."
+        why: "Discuss + objet direct, sans préposition : c'est un faux ami de « discuter de »."
       },
       {
         id: "en-t-b2-11", skill: "reading",
