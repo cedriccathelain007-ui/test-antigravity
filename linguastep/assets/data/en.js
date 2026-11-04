@@ -209,10 +209,10 @@ window.COURSES.en = {
       },
       {
         id: "en-t-a1-29", skill: "grammar",
-        q: "___ you like a coffee?",
+        q: "___ you like a coffee? — Yes, please.",
         options: ["Would", "Do", "Are", "Have"],
         a: 0,
-        why: "Would you like… ? sert à proposer poliment. Do you like… ? demande un goût."
+        why: "Would you like… ? sert à proposer poliment. Do you like… ? demande un goût, pas une proposition."
       },
       {
         id: "en-t-a1-30", skill: "grammar",
@@ -279,10 +279,10 @@ window.COURSES.en = {
       },
       {
         id: "en-t-a1-39", skill: "vocab",
-        q: "We ___ the shop at 7 p.m.",
-        options: ["close", "fill", "open", "start"],
+        q: "The shop is ___ today: it is a public holiday.",
+        options: ["closed", "close", "closing", "closes"],
         a: 0,
-        why: "Close a shop = fermer le magasin. Open = ouvrir."
+        why: "Closed = fermé (adjectif). Close est le verbe : on ne dit pas the shop is close."
       },
       {
         id: "en-t-a1-40", skill: "vocab",
@@ -293,10 +293,10 @@ window.COURSES.en = {
       },
       {
         id: "en-t-a1-41", skill: "vocab",
-        q: "The ___ of this item is four euros.",
+        q: "The ___ on the label is four euros.",
         options: ["price", "cost", "value", "money"],
         a: 0,
-        why: "Price = prix affiché. Cost = ce que cela coûte ; value = valeur."
+        why: "Price = prix affiché sur l'étiquette. Cost = ce que cela coûte ; value = valeur."
       },
       {
         id: "en-t-a1-42", skill: "vocab",
@@ -833,7 +833,7 @@ window.COURSES.en = {
       },
       {
         id: "en-t-b1-19", skill: "grammar",
-        q: "You ___ smoke in the stockroom.",
+        q: "You ___ smoke in the stockroom: it is strictly forbidden.",
         options: ["mustn't", "don't have to", "mustn't to", "needn't to"],
         a: 0,
         why: "Mustn't = interdiction. Don't have to = absence d'obligation, ce n'est pas la même chose."
@@ -882,7 +882,7 @@ window.COURSES.en = {
       },
       {
         id: "en-t-b1-26", skill: "grammar",
-        q: "By the end of March, the team ___ the target.",
+        q: "By the end of March last year, the team ___ the target.",
         options: ["had reached", "has reached", "reaches", "reaching"],
         a: 0,
         why: "By + date passée situe l'action avant un repère passé : past perfect (had reached)."
@@ -1306,7 +1306,7 @@ window.COURSES.en = {
       },
       {
         id: "en-t-b2-37", skill: "vocab",
-        q: "Actually, the meeting is on Thursday, not Tuesday.",
+        q: "\"Actually, the meeting is on Thursday, not Tuesday.\" Which word can replace \"Actually\"?",
         options: ["In fact", "Currently", "Eventually", "At present"],
         a: 0,
         why: "Actually = en fait (faux ami). Currently = actuellement ; eventually = finalement."
@@ -1576,10 +1576,10 @@ window.COURSES.en = {
       },
       {
         id: "en-t-c1-26", skill: "grammar",
-        q: "The forecast, ___ uncertain, is still useful.",
-        options: ["albeit", "although", "despite", "however"],
+        q: "Not only ___ the deadline missed, but the budget was also exceeded.",
+        options: ["was", "were", "did", "had"],
         a: 0,
-        why: "Albeit + adjectif ou groupe sans verbe : albeit uncertain = quoiqu'incertain."
+        why: "Not only en tête de phrase entraîne l'inversion : was the deadline missed (passif)."
       },
       {
         id: "en-t-c1-27", skill: "grammar",
@@ -1604,10 +1604,10 @@ window.COURSES.en = {
       },
       {
         id: "en-t-c1-30", skill: "grammar",
-        q: "Of the two options, the second is ___.",
+        q: "Of the two options, the second is ___ one.",
         options: ["the more expensive", "more expensive", "the most expensive", "most expensive"],
         a: 0,
-        why: "Comparaison entre deux éléments : the more expensive. Le superlatif sert pour trois éléments ou plus."
+        why: "Comparaison entre deux éléments : the more expensive one. Le superlatif sert pour trois éléments ou plus."
       },
       {
         id: "en-t-c1-31", skill: "vocab",
@@ -1874,10 +1874,10 @@ window.COURSES.en = {
       },
       {
         id: "en-t-c2-19", skill: "grammar",
-        q: "The decision, ___ controversial, was widely supported.",
-        options: ["though", "although", "despite", "however"],
+        q: "Little ___ he know that the deal would collapse.",
+        options: ["did", "does", "had", "was"],
         a: 0,
-        why: "Though peut se placer après le nom sans changer la structure : the decision, though controversial."
+        why: "Little en tête de phrase entraîne l'inversion : Little did he know (il était loin de se douter)."
       },
       {
         id: "en-t-c2-20", skill: "grammar",
@@ -1944,10 +1944,10 @@ window.COURSES.en = {
       },
       {
         id: "en-t-c2-29", skill: "grammar",
-        q: "The company's profits, ___ had been forecast, rose sharply.",
+        q: "The launch went ahead, ___ planned.",
         options: ["as", "like", "that", "which"],
         a: 0,
-        why: "As had been forecast = comme cela avait été prévu. As reprend toute la proposition."
+        why: "As planned = comme prévu. Like ne s'emploie pas ainsi devant un participe passé."
       },
       {
         id: "en-t-c2-30", skill: "grammar",
