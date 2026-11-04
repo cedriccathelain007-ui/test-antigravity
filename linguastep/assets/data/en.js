@@ -94,6 +94,264 @@ window.COURSES.en = {
         options: ["tills", "shelves", "stockroom", "office"],
         a: 0,
         why: "Till = caisse (britannique). Aux États-Unis, on dit cash register."
+      },
+      {
+        id: "en-t-a1-13", skill: "grammar",
+        q: "My office is ___ the second floor.",
+        options: ["on", "in", "at", "to"],
+        a: 0,
+        why: "On + étage : on the second floor. At s'emploie pour un point précis (at the door)."
+      },
+      {
+        id: "en-t-a1-14", skill: "grammar",
+        q: "___ there a bank near here?",
+        options: ["Is", "Are", "Do", "Have"],
+        a: 0,
+        why: "There is + singulier. Question : Is there a bank… ?"
+      },
+      {
+        id: "en-t-a1-15", skill: "grammar",
+        q: "I don't ___ a car.",
+        options: ["have", "has", "am", "do"],
+        a: 0,
+        why: "Après don't, on met la base verbale : don't have."
+      },
+      {
+        id: "en-t-a1-16", skill: "grammar",
+        q: "She is ___ engineer.",
+        options: ["an", "a", "the", "—"],
+        a: 0,
+        why: "An devant un son voyelle : an engineer. A devant un son consonne : a manager."
+      },
+      {
+        id: "en-t-a1-17", skill: "grammar",
+        q: "How much ___ this bag?",
+        options: ["is", "are", "do", "does"],
+        a: 0,
+        why: "How much + be + nom singulier : How much is this bag?"
+      },
+      {
+        id: "en-t-a1-18", skill: "grammar",
+        q: "These ___ my colleagues.",
+        options: ["are", "is", "am", "be"],
+        a: 0,
+        why: "These = pluriel → are. This = singulier → is."
+      },
+      {
+        id: "en-t-a1-19", skill: "grammar",
+        q: "___ you speak English?",
+        options: ["Do", "Does", "Are", "Is"],
+        a: 0,
+        why: "Question au présent simple avec you : Do + sujet + base verbale."
+      },
+      {
+        id: "en-t-a1-20", skill: "grammar",
+        q: "The meeting is ___ Tuesday.",
+        options: ["on", "in", "at", "to"],
+        a: 0,
+        why: "On + jour : on Tuesday. In + mois ou année, at + heure."
+      },
+      {
+        id: "en-t-a1-21", skill: "grammar",
+        q: "I go to work ___ train.",
+        options: ["by", "with", "in", "on"],
+        a: 0,
+        why: "By + moyen de transport : by train, by bus, by car. À pied se dit on foot."
+      },
+      {
+        id: "en-t-a1-22", skill: "grammar",
+        q: "He ___ not work on Fridays.",
+        options: ["does", "is", "do", "has"],
+        a: 0,
+        why: "Négation au présent simple, 3e personne : he does not work (doesn't work)."
+      },
+      {
+        id: "en-t-a1-23", skill: "grammar",
+        q: "There ___ a problem with the order.",
+        options: ["is", "are", "have", "be"],
+        a: 0,
+        why: "There is + nom singulier (a problem)."
+      },
+      {
+        id: "en-t-a1-24", skill: "grammar",
+        q: "My manager ___ in Paris.",
+        options: ["works", "work", "working", "is work"],
+        a: 0,
+        why: "3e personne du singulier au présent simple : works."
+      },
+      {
+        id: "en-t-a1-25", skill: "grammar",
+        q: "___ is the meeting? — At 10 a.m.",
+        options: ["When", "Where", "Who", "What"],
+        a: 0,
+        why: "When = quand (temps). Where = où (lieu)."
+      },
+      {
+        id: "en-t-a1-26", skill: "grammar",
+        q: "We ___ a meeting every Monday.",
+        options: ["have", "has", "are", "is"],
+        a: 0,
+        why: "We + have (base verbale). Has s'emploie seulement avec he, she, it."
+      },
+      {
+        id: "en-t-a1-27", skill: "grammar",
+        q: "The shop ___ at 8 a.m. and closes at 8 p.m.",
+        options: ["opens", "open", "opening", "is open"],
+        a: 0,
+        why: "The shop = 3e personne du singulier → opens."
+      },
+      {
+        id: "en-t-a1-28", skill: "grammar",
+        q: "I work ___ Monday to Friday.",
+        options: ["from", "at", "in", "on"],
+        a: 0,
+        why: "From … to … pour une plage de temps : from Monday to Friday."
+      },
+      {
+        id: "en-t-a1-29", skill: "grammar",
+        q: "___ you like a coffee?",
+        options: ["Would", "Do", "Are", "Have"],
+        a: 0,
+        why: "Would you like… ? sert à proposer poliment. Do you like… ? demande un goût."
+      },
+      {
+        id: "en-t-a1-30", skill: "grammar",
+        q: "My sister works here. ___ name is Sarah.",
+        options: ["Her", "His", "She", "Their"],
+        a: 0,
+        why: "Possessif féminin : her name. His = son (à lui)."
+      },
+      {
+        id: "en-t-a1-31", skill: "grammar",
+        q: "Can I ___ your pen, please?",
+        options: ["borrow", "lend", "lending", "borrowing"],
+        a: 0,
+        why: "Borrow = emprunter (on reçoit). Lend = prêter (on donne). Après can, base verbale."
+      },
+      {
+        id: "en-t-a1-32", skill: "vocab",
+        q: "A person who buys things in a shop is a ___.",
+        options: ["customer", "supplier", "manager", "driver"],
+        a: 0,
+        why: "Customer = client. Supplier = fournisseur ; manager = responsable."
+      },
+      {
+        id: "en-t-a1-33", skill: "vocab",
+        q: "The document you get after paying is a ___.",
+        options: ["receipt", "quotation", "contract", "invoice"],
+        a: 0,
+        why: "Receipt = ticket de caisse, remis après paiement. Invoice = facture, envoyée avant ou après."
+      },
+      {
+        id: "en-t-a1-34", skill: "vocab",
+        q: "The person who leads the team is the ___.",
+        options: ["manager", "client", "customer", "visitor"],
+        a: 0,
+        why: "Manager = responsable d'équipe."
+      },
+      {
+        id: "en-t-a1-35", skill: "vocab",
+        q: "How much does it ___?",
+        options: ["cost", "pay", "spend", "buy"],
+        a: 0,
+        why: "Cost = coûter (le produit coûte). Pay et spend ont un sujet personnel."
+      },
+      {
+        id: "en-t-a1-36", skill: "vocab",
+        q: "Monday, Tuesday, ___.",
+        options: ["Wednesday", "Thursday", "Friday", "Sunday"],
+        a: 0,
+        why: "Ordre des jours : Monday, Tuesday, Wednesday, Thursday, Friday."
+      },
+      {
+        id: "en-t-a1-37", skill: "vocab",
+        q: "Our products are on the ___.",
+        options: ["shelves", "doors", "walls", "tills"],
+        a: 0,
+        why: "Shelf au pluriel = shelves (f devient ves). Les produits sont sur les étagères."
+      },
+      {
+        id: "en-t-a1-38", skill: "vocab",
+        q: "See you ___, at the same time.",
+        options: ["tomorrow", "yesterday", "ago", "last"],
+        a: 0,
+        why: "Tomorrow = demain. Yesterday = hier ; ago et last renvoient au passé."
+      },
+      {
+        id: "en-t-a1-39", skill: "vocab",
+        q: "We ___ the shop at 7 p.m.",
+        options: ["close", "fill", "open", "start"],
+        a: 0,
+        why: "Close a shop = fermer le magasin. Open = ouvrir."
+      },
+      {
+        id: "en-t-a1-40", skill: "vocab",
+        q: "I'll send you an ___ with the details.",
+        options: ["email", "email address", "letter post", "call"],
+        a: 0,
+        why: "Send an email = envoyer un courriel. Email address = l'adresse, pas le message."
+      },
+      {
+        id: "en-t-a1-41", skill: "vocab",
+        q: "The ___ of this item is four euros.",
+        options: ["price", "cost", "value", "money"],
+        a: 0,
+        why: "Price = prix affiché. Cost = ce que cela coûte ; value = valeur."
+      },
+      {
+        id: "en-t-a1-42", skill: "vocab",
+        q: "It's 9 ___ and the shop is open.",
+        options: ["o'clock", "hours", "time", "clock"],
+        a: 0,
+        why: "Heure pleine : 9 o'clock. Hours = des durées ; clock = l'horloge."
+      },
+      {
+        id: "en-t-a1-43", skill: "reading",
+        passage: "Notice: Mon-épicerie is closed on 1 May. We open again on 2 May at 8 a.m.",
+        q: "When does the shop open again?",
+        options: ["1 May at 8 a.m.", "2 May at 8 a.m.", "2 May at 7 p.m.", "1 May at 7 p.m."],
+        a: 1,
+        why: "Le texte dit : « We open again on 2 May at 8 a.m. »."
+      },
+      {
+        id: "en-t-a1-44", skill: "reading",
+        passage: "Business card: Paul Martin — Store Manager — Mon-épicerie Lille — 06 12 34 56 78.",
+        q: "What is Paul's job?",
+        options: ["Store manager", "Customer", "Driver", "Cashier"],
+        a: 0,
+        why: "La carte indique « Store Manager » sous son nom."
+      },
+      {
+        id: "en-t-a1-45", skill: "reading",
+        passage: "Hi, I'm at the station. I arrive at the shop at 9.30. See you soon. Marc",
+        q: "Where is Marc now?",
+        options: ["At the shop", "At the station", "At home", "At the bank"],
+        a: 1,
+        why: "« I'm at the station » : il est à la gare."
+      },
+      {
+        id: "en-t-a1-46", skill: "reading",
+        passage: "Price list: apples 2 € per kilo — bread 1.50 € — milk 1 €.",
+        q: "How much is the bread?",
+        options: ["1 €", "1.50 €", "2 €", "3 €"],
+        a: 1,
+        why: "Le bread est à 1.50 € sur la liste."
+      },
+      {
+        id: "en-t-a1-47", skill: "reading",
+        passage: "Sign on the door: Staff entrance. Please ring the bell.",
+        q: "What must staff do?",
+        options: ["Ring the bell", "Wait outside", "Call the manager", "Use the shop door"],
+        a: 0,
+        why: "Le panneau demande « Please ring the bell »."
+      },
+      {
+        id: "en-t-a1-48", skill: "reading",
+        passage: "Opening hours: Monday to Friday, 8 a.m. to 8 p.m. Saturday, 8 a.m. to 7 p.m. Sunday, closed.",
+        q: "What time does the shop close on Saturday?",
+        options: ["8 p.m.", "7 p.m.", "8 a.m.", "It is closed"],
+        a: 1,
+        why: "« Saturday, 8 a.m. to 7 p.m. » : fermeture à 19 h."
       }
     ],
 
@@ -183,6 +441,264 @@ window.COURSES.en = {
         options: ["on", "in", "at", "by"],
         a: 0,
         why: "On + jour de la semaine (on Tuesday morning). By Tuesday = au plus tard mardi."
+      },
+      {
+        id: "en-t-a2-13", skill: "grammar",
+        q: "I ___ to the supplier last week.",
+        options: ["spoke", "speak", "have spoken", "speaking"],
+        a: 0,
+        why: "Last week = passé terminé → past simple. Speak est irrégulier : speak, spoke, spoken."
+      },
+      {
+        id: "en-t-a2-14", skill: "grammar",
+        q: "We ___ this supplier for five years.",
+        options: ["know", "have known", "knew", "are knowing"],
+        a: 1,
+        why: "For + durée avec une situation qui continue → present perfect (have known)."
+      },
+      {
+        id: "en-t-a2-15", skill: "grammar",
+        q: "This delivery is ___ than the last one.",
+        options: ["fast", "faster", "fastest", "more fast"],
+        a: 1,
+        why: "Comparatif de supériorité des adjectifs courts : fast → faster than."
+      },
+      {
+        id: "en-t-a2-16", skill: "grammar",
+        q: "It is the ___ shop in the city.",
+        options: ["big", "bigger", "biggest", "most big"],
+        a: 2,
+        why: "Superlatif des adjectifs courts : the biggest (doublement du g)."
+      },
+      {
+        id: "en-t-a2-17", skill: "grammar",
+        q: "I ___ call you back in ten minutes.",
+        options: ["will", "am", "do", "have"],
+        a: 0,
+        why: "Décision prise au moment où l'on parle : will + base verbale."
+      },
+      {
+        id: "en-t-a2-18", skill: "grammar",
+        q: "Look at the sky: it ___ rain.",
+        options: ["is going to", "going to", "will to", "is go to"],
+        a: 0,
+        why: "Going to + infinitif pour une prévision fondée sur ce que l'on voit."
+      },
+      {
+        id: "en-t-a2-19", skill: "grammar",
+        q: "How ___ sugar do you take?",
+        options: ["much", "many", "few", "a"],
+        a: 0,
+        why: "How much + indénombrable (sugar). How many + dénombrable pluriel."
+      },
+      {
+        id: "en-t-a2-20", skill: "grammar",
+        q: "We don't have ___ time before the meeting.",
+        options: ["much", "many", "few", "a lot"],
+        a: 0,
+        why: "Time est indénombrable : not much time. Many s'emploie avec le pluriel."
+      },
+      {
+        id: "en-t-a2-21", skill: "grammar",
+        q: "You ___ show your badge at the entrance.",
+        options: ["must", "must to", "are must", "have"],
+        a: 0,
+        why: "Must + base verbale, sans to : you must show."
+      },
+      {
+        id: "en-t-a2-22", skill: "grammar",
+        q: "I ___ work at 6 a.m. on Mondays.",
+        options: ["have to", "has to", "must to", "am have to"],
+        a: 0,
+        why: "Have to exprime une obligation externe. Avec I, on emploie have to."
+      },
+      {
+        id: "en-t-a2-23", skill: "grammar",
+        q: "There is ___ milk in the fridge.",
+        options: ["some", "any", "many", "a"],
+        a: 0,
+        why: "Phrase affirmative : some + indénombrable. Any s'emploie en négation et en question."
+      },
+      {
+        id: "en-t-a2-24", skill: "grammar",
+        q: "She is the person ___ handles complaints.",
+        options: ["who", "which", "whose", "where"],
+        a: 0,
+        why: "Who reprend une personne sujet. Which reprend une chose."
+      },
+      {
+        id: "en-t-a2-25", skill: "grammar",
+        q: "If you ___ the form, we will process the order.",
+        options: ["complete", "completes", "will complete", "completing"],
+        a: 0,
+        why: "First conditional : if + présent simple, will + infinitif. Jamais will après if."
+      },
+      {
+        id: "en-t-a2-26", skill: "grammar",
+        q: "I was ___ when you called.",
+        options: ["driving", "drive", "drove", "driven"],
+        a: 0,
+        why: "Past continuous : was + verbe en -ing, action en cours dans le passé."
+      },
+      {
+        id: "en-t-a2-27", skill: "grammar",
+        q: "They ___ the shop in 2019.",
+        options: ["opened", "open", "have opened", "opening"],
+        a: 0,
+        why: "Date passée précise (in 2019) → past simple, pas present perfect."
+      },
+      {
+        id: "en-t-a2-28", skill: "grammar",
+        q: "The meeting ___ at 9 and finished at 10.",
+        options: ["started", "starts", "has started", "starting"],
+        a: 0,
+        why: "Récit au passé : les deux verbes sont au past simple (started, finished)."
+      },
+      {
+        id: "en-t-a2-29", skill: "grammar",
+        q: "Could you ___ me the price list?",
+        options: ["send", "sending", "sent", "sends"],
+        a: 0,
+        why: "Après could, base verbale : could you send."
+      },
+      {
+        id: "en-t-a2-30", skill: "grammar",
+        q: "There aren't ___ chairs in the meeting room.",
+        options: ["enough", "enough of", "many enough", "some"],
+        a: 0,
+        why: "Enough se place avant le nom : enough chairs. Assez de…"
+      },
+      {
+        id: "en-t-a2-31", skill: "vocab",
+        q: "We need to ___ the delivery for tomorrow morning.",
+        options: ["arrange", "arrive", "attend", "announce"],
+        a: 0,
+        why: "Arrange a delivery = organiser une livraison. Arrive = arriver."
+      },
+      {
+        id: "en-t-a2-32", skill: "vocab",
+        q: "We offer a 10 % ___ on large orders.",
+        options: ["discount", "price", "bill", "tax"],
+        a: 0,
+        why: "Discount = remise. Bill = note à payer ; tax = taxe."
+      },
+      {
+        id: "en-t-a2-33", skill: "vocab",
+        q: "The ___ for the project is Friday.",
+        options: ["deadline", "dateline", "delay", "date"],
+        a: 0,
+        why: "Deadline = date limite. Delay = retard."
+      },
+      {
+        id: "en-t-a2-34", skill: "vocab",
+        q: "Please ___ in the form and return it to me.",
+        options: ["fill", "write", "put", "make"],
+        a: 0,
+        why: "Fill in a form = remplir un formulaire (britannique ; américain : fill out)."
+      },
+      {
+        id: "en-t-a2-35", skill: "vocab",
+        q: "I'll ___ you up at the station at 8.",
+        options: ["pick", "take", "put", "look"],
+        a: 0,
+        why: "Pick up = aller chercher quelqu'un. Take up = occuper ; look up = chercher une information."
+      },
+      {
+        id: "en-t-a2-36", skill: "vocab",
+        q: "We are out of ___: there is no coffee left.",
+        options: ["stock", "price", "order", "bill"],
+        a: 0,
+        why: "Out of stock = en rupture de stock."
+      },
+      {
+        id: "en-t-a2-37", skill: "vocab",
+        q: "Can you ___ the invoice by Friday?",
+        options: ["pay", "spend", "cost", "charge"],
+        a: 0,
+        why: "Pay an invoice = payer une facture. Spend s'emploie pour une dépense personnelle."
+      },
+      {
+        id: "en-t-a2-38", skill: "vocab",
+        q: "The ___ of the meeting is to plan the launch.",
+        options: ["purpose", "profit", "product", "project"],
+        a: 0,
+        why: "Purpose = but, objectif. Profit = bénéfice."
+      },
+      {
+        id: "en-t-a2-39", skill: "vocab",
+        q: "He works the night ___ at the shop.",
+        options: ["shift", "ship", "shelf", "site"],
+        a: 0,
+        why: "Shift = équipe, poste de travail (night shift = équipe de nuit)."
+      },
+      {
+        id: "en-t-a2-40", skill: "vocab",
+        q: "Please ___ me know if you can come.",
+        options: ["let", "make", "do", "say"],
+        a: 0,
+        why: "Let me know = faites-moi savoir. On ne dit pas make me know."
+      },
+      {
+        id: "en-t-a2-41", skill: "vocab",
+        q: "I'm ___ for the marketing budget.",
+        options: ["responsible", "response", "responsibility", "respond"],
+        a: 0,
+        why: "Be responsible for = être responsable de. Responsibility est le nom."
+      },
+      {
+        id: "en-t-a2-42", skill: "vocab",
+        q: "We need to ___ the meeting room for Thursday.",
+        options: ["book", "borrow", "buy", "bring"],
+        a: 0,
+        why: "Book a room = réserver une salle."
+      },
+      {
+        id: "en-t-a2-43", skill: "reading",
+        passage: "Hi Nina, the order will arrive on Thursday morning. Please check the quantities before signing the delivery note. Thanks, Sam.",
+        q: "What should Nina check?",
+        options: ["The price", "The quantities", "The address", "The invoice"],
+        a: 1,
+        why: "« Please check the quantities before signing the delivery note »."
+      },
+      {
+        id: "en-t-a2-44", skill: "reading",
+        passage: "Staff training: Wednesday at 2 p.m., meeting room B. Bring your laptop.",
+        q: "What should staff bring?",
+        options: ["A laptop", "The delivery note", "A badge", "A form"],
+        a: 0,
+        why: "Le message dit : « Bring your laptop »."
+      },
+      {
+        id: "en-t-a2-45", skill: "reading",
+        passage: "We have moved the stockroom to the first floor. The old room is now the staff kitchen.",
+        q: "What is on the first floor now?",
+        options: ["The stockroom", "The kitchen", "The office", "The shop"],
+        a: 0,
+        why: "« We have moved the stockroom to the first floor » : c'est le nouvel emplacement."
+      },
+      {
+        id: "en-t-a2-46", skill: "reading",
+        passage: "Our new opening hours start on Monday: 8 a.m. to 9 p.m., from Monday to Saturday.",
+        q: "When do the new hours start?",
+        options: ["Monday", "Saturday", "Sunday", "Next month"],
+        a: 0,
+        why: "« Our new opening hours start on Monday »."
+      },
+      {
+        id: "en-t-a2-47", skill: "reading",
+        passage: "Invoice 204: 12 boxes of coffee, total 48 €. Payment within 30 days.",
+        q: "How much is the invoice?",
+        options: ["12 €", "30 €", "48 €", "204 €"],
+        a: 2,
+        why: "Le total indiqué est 48 €. 204 est le numéro de facture, 30 le délai de paiement."
+      },
+      {
+        id: "en-t-a2-48", skill: "reading",
+        passage: "Hi team, the lift is out of order until Friday. Please use the stairs.",
+        q: "What is out of order?",
+        options: ["The lift", "The stairs", "The door", "The till"],
+        a: 0,
+        why: "« the lift is out of order » : l'ascenseur est en panne."
       }
     ],
 
@@ -272,6 +788,264 @@ window.COURSES.en = {
         options: ["place", "placed", "will place", "placing"],
         a: 0,
         why: "First conditional : if + présent simple, will + infinitif. Jamais will après if."
+      },
+      {
+        id: "en-t-b1-13", skill: "grammar",
+        q: "Although the price was high, we ___ the order.",
+        options: ["placed", "place", "placing", "are place"],
+        a: 0,
+        why: "Le récit est au passé (was) : placed. Although introduit une concession."
+      },
+      {
+        id: "en-t-b1-14", skill: "grammar",
+        q: "Despite ___ late, she finished the report.",
+        options: ["arriving", "arrive", "arrived", "to arrive"],
+        a: 0,
+        why: "Despite + verbe en -ing (ou despite + nom). To et la base verbale sont impossibles."
+      },
+      {
+        id: "en-t-b1-15", skill: "grammar",
+        q: "The report ___ every Monday by the finance team.",
+        options: ["is checked", "checks", "checking", "checked"],
+        a: 0,
+        why: "Passif au présent : is + participe passé, car le rapport subit l'action."
+      },
+      {
+        id: "en-t-b1-16", skill: "grammar",
+        q: "I ___ working here since 2020.",
+        options: ["have been", "am", "was", "had"],
+        a: 0,
+        why: "Since + date de départ avec une action qui continue : present perfect continuous (have been working)."
+      },
+      {
+        id: "en-t-b1-17", skill: "grammar",
+        q: "We ___ the supplier tomorrow morning.",
+        options: ["are meeting", "meet to", "meeting", "will met"],
+        a: 0,
+        why: "Rendez-vous fixé : présent continu à valeur de futur (are meeting)."
+      },
+      {
+        id: "en-t-b1-18", skill: "grammar",
+        q: "He asked me ___ I had sent the invoice.",
+        options: ["if", "that", "what", "which"],
+        a: 0,
+        why: "Question indirecte fermée au discours indirect : if (ou whether)."
+      },
+      {
+        id: "en-t-b1-19", skill: "grammar",
+        q: "You ___ smoke in the stockroom.",
+        options: ["mustn't", "don't have to", "mustn't to", "needn't to"],
+        a: 0,
+        why: "Mustn't = interdiction. Don't have to = absence d'obligation, ce n'est pas la même chose."
+      },
+      {
+        id: "en-t-b1-20", skill: "grammar",
+        q: "It's the shop ___ opened last month.",
+        options: ["which", "who", "whose", "where"],
+        a: 0,
+        why: "Which reprend une chose (the shop). Who reprend une personne."
+      },
+      {
+        id: "en-t-b1-21", skill: "grammar",
+        q: "I'm looking forward to ___ from you.",
+        options: ["hearing", "hear", "heard", "hears"],
+        a: 0,
+        why: "Look forward to + verbe en -ing : to est ici une préposition."
+      },
+      {
+        id: "en-t-b1-22", skill: "grammar",
+        q: "She suggested ___ the meeting to Friday.",
+        options: ["moving", "move", "to move", "moved"],
+        a: 0,
+        why: "Suggest + verbe en -ing (suggest moving). On ne dit pas suggest to move."
+      },
+      {
+        id: "en-t-b1-23", skill: "grammar",
+        q: "We ___ have checked the address before sending.",
+        options: ["should", "should to", "must to", "would to"],
+        a: 0,
+        why: "Should + have + participe passé exprime un regret ou un reproche sur le passé."
+      },
+      {
+        id: "en-t-b1-24", skill: "grammar",
+        q: "The order ___ yet.",
+        options: ["hasn't arrived", "didn't arrive", "hasn't arrive", "not arrived"],
+        a: 0,
+        why: "Yet s'emploie avec le present perfect en anglais britannique : hasn't arrived yet."
+      },
+      {
+        id: "en-t-b1-25", skill: "grammar",
+        q: "If I ___ you, I would ask for a discount.",
+        options: ["were", "am", "was being", "be"],
+        a: 0,
+        why: "Avec be au second conditionnel, on emploie were à toutes les personnes (If I were you)."
+      },
+      {
+        id: "en-t-b1-26", skill: "grammar",
+        q: "By the end of March, the team ___ the target.",
+        options: ["had reached", "has reached", "reaches", "reaching"],
+        a: 0,
+        why: "By + date passée situe l'action avant un repère passé : past perfect (had reached)."
+      },
+      {
+        id: "en-t-b1-27", skill: "grammar",
+        q: "The new process is ___ than the old one.",
+        options: ["more efficient", "efficienter", "most efficient", "efficient more"],
+        a: 0,
+        why: "Adjectif long : comparatif avec more (more efficient than)."
+      },
+      {
+        id: "en-t-b1-28", skill: "grammar",
+        q: "Neither the manager ___ the staff were informed.",
+        options: ["nor", "or", "and", "but"],
+        a: 0,
+        why: "Corrélation neither … nor : ni l'un ni l'autre."
+      },
+      {
+        id: "en-t-b1-29", skill: "grammar",
+        q: "I'd rather ___ the meeting on Monday.",
+        options: ["have", "having", "to have", "had"],
+        a: 0,
+        why: "Would rather + base verbale, sans to : I'd rather have."
+      },
+      {
+        id: "en-t-b1-30", skill: "grammar",
+        q: "The shop ___ if we don't fix the till.",
+        options: ["will close", "closes will", "would close", "close"],
+        a: 0,
+        why: "First conditional : if + présent, will + infinitif. Ici la conséquence est will close."
+      },
+      {
+        id: "en-t-b1-31", skill: "vocab",
+        q: "The supplier will ___ the order on Friday.",
+        options: ["confirm", "confirmation", "confirmed", "confirming"],
+        a: 0,
+        why: "Confirm = verbe (confirmer). Confirmation est le nom. Après will, base verbale."
+      },
+      {
+        id: "en-t-b1-32", skill: "vocab",
+        q: "We need to ___ into the cause of the delay.",
+        options: ["look", "look after", "look up", "look for"],
+        a: 0,
+        why: "Look into = examiner, enquêter. Look after = s'occuper de ; look for = chercher."
+      },
+      {
+        id: "en-t-b1-33", skill: "vocab",
+        q: "Please ___ up the invoice by email.",
+        options: ["follow", "follows", "following", "followed"],
+        a: 0,
+        why: "Follow up = relancer, faire le suivi. Après please, base verbale."
+      },
+      {
+        id: "en-t-b1-34", skill: "vocab",
+        q: "We have ___ out of coffee again.",
+        options: ["run", "ran", "running", "runs"],
+        a: 0,
+        why: "Run out of = ne plus avoir. Au present perfect : have run out of."
+      },
+      {
+        id: "en-t-b1-35", skill: "vocab",
+        q: "She ___ a complaint about the delivery.",
+        options: ["made", "did", "took", "gave"],
+        a: 0,
+        why: "Make a complaint = déposer une réclamation. On ne dit pas do a complaint."
+      },
+      {
+        id: "en-t-b1-36", skill: "vocab",
+        q: "We must ___ the deadline.",
+        options: ["meet", "do", "arrive", "reach to"],
+        a: 0,
+        why: "Meet a deadline = respecter la date limite."
+      },
+      {
+        id: "en-t-b1-37", skill: "vocab",
+        q: "The manager will ___ the problem with the supplier.",
+        options: ["deal with", "deal", "deal to", "deal for"],
+        a: 0,
+        why: "Deal with = traiter, régler un problème."
+      },
+      {
+        id: "en-t-b1-38", skill: "vocab",
+        q: "We need to ___ a decision by Friday.",
+        options: ["make", "do", "have", "put"],
+        a: 0,
+        why: "Make a decision = prendre une décision. L'anglais britannique accepte aussi take a decision."
+      },
+      {
+        id: "en-t-b1-39", skill: "vocab",
+        q: "The company will ___ ten new staff next month.",
+        options: ["take on", "take off", "take up", "take out"],
+        a: 0,
+        why: "Take on = recruter. Take off = décoller ; take up = occuper."
+      },
+      {
+        id: "en-t-b1-40", skill: "vocab",
+        q: "The report ___ the main risks.",
+        options: ["outlines", "outline of", "outlining", "outlined by"],
+        a: 0,
+        why: "Outline = présenter les grandes lignes. Le sujet est the report : outlines."
+      },
+      {
+        id: "en-t-b1-41", skill: "vocab",
+        q: "Sales have ___ by 10 % this year.",
+        options: ["increased", "increase", "increasing", "increases"],
+        a: 0,
+        why: "Present perfect : have + participe passé (increased)."
+      },
+      {
+        id: "en-t-b1-42", skill: "vocab",
+        q: "We are ___ with the current supplier.",
+        options: ["dissatisfied", "dissatisfaction", "dissatisfy", "unsatisfy"],
+        a: 0,
+        why: "Be dissatisfied with = être mécontent de. Dissatisfaction est le nom."
+      },
+      {
+        id: "en-t-b1-43", skill: "reading",
+        passage: "The delivery scheduled for Tuesday will arrive on Thursday because of a transport issue. We apologise for the inconvenience.",
+        q: "Why is the delivery late?",
+        options: ["A transport issue", "A price change", "A missing order", "A public holiday"],
+        a: 0,
+        why: "« because of a transport issue » : la cause est le transport."
+      },
+      {
+        id: "en-t-b1-44", skill: "reading",
+        passage: "Since we introduced the online booking form, phone calls have fallen by half. The team now spends more time with customers in the shop.",
+        q: "What has happened since the change?",
+        options: ["Phone calls have fallen", "Sales have fallen", "The team is smaller", "Customers complain more"],
+        a: 0,
+        why: "« phone calls have fallen by half » : les appels ont diminué de moitié."
+      },
+      {
+        id: "en-t-b1-45", skill: "reading",
+        passage: "The new fridge is more efficient, but it is noisier. Staff have asked for it to be moved away from the tills.",
+        q: "What do staff want?",
+        options: ["To move the fridge", "To buy a new fridge", "To close the tills", "To work elsewhere"],
+        a: 0,
+        why: "« asked for it to be moved away from the tills » : ils veulent le déplacer."
+      },
+      {
+        id: "en-t-b1-46", skill: "reading",
+        passage: "Training on the new till system is compulsory for all staff. Sessions run on Tuesday and Thursday, 5–6 p.m.",
+        q: "Who must attend the training?",
+        options: ["All staff", "Managers only", "New staff only", "Cashiers only"],
+        a: 0,
+        why: "« compulsory for all staff » : la formation est obligatoire pour tout le personnel."
+      },
+      {
+        id: "en-t-b1-47", skill: "reading",
+        passage: "Our supplier has raised prices by 8 %. We are looking for a second supplier to keep our margins.",
+        q: "Why are they looking for a second supplier?",
+        options: ["To keep margins", "To open a shop", "To reduce staff", "To change products"],
+        a: 0,
+        why: "« to keep our margins » : pour préserver les marges."
+      },
+      {
+        id: "en-t-b1-48", skill: "reading",
+        passage: "The audit recommends locking the stockroom at night. Only the duty manager will hold the key.",
+        q: "Who will have the key?",
+        options: ["The duty manager", "All staff", "The supplier", "The auditor"],
+        a: 0,
+        why: "« Only the duty manager will hold the key »."
       }
     ],
 
@@ -361,6 +1135,264 @@ window.COURSES.en = {
         options: ["if", "that", "what", "weather"],
         a: 0,
         why: "Question indirecte fermée : if (ou whether, plus formel). Weather = météo, homophone."
+      },
+      {
+        id: "en-t-b2-13", skill: "grammar",
+        q: "If we had left earlier, we ___ the train.",
+        options: ["wouldn't have missed", "wouldn't miss", "hadn't missed", "won't miss"],
+        a: 0,
+        why: "Third conditional : if + had + participe, would have + participe (négatif : wouldn't have missed)."
+      },
+      {
+        id: "en-t-b2-14", skill: "grammar",
+        q: "The figures look wrong. They ___ checked before the meeting.",
+        options: ["must have been", "must have", "must be checking", "must"],
+        a: 0,
+        why: "Déduction sur le passé au passif : must have been + participe passé."
+      },
+      {
+        id: "en-t-b2-15", skill: "grammar",
+        q: "She denied ___ the email.",
+        options: ["sending", "send", "to send", "sent"],
+        a: 0,
+        why: "Deny + verbe en -ing : deny sending. On ne dit pas deny to send."
+      },
+      {
+        id: "en-t-b2-16", skill: "grammar",
+        q: "The proposal, ___ was submitted in June, is still under review.",
+        options: ["which", "that", "what", "who"],
+        a: 0,
+        why: "Relative non restrictive entre virgules : which. That est impossible après une virgule."
+      },
+      {
+        id: "en-t-b2-17", skill: "grammar",
+        q: "No sooner had the report been published ___ the figures changed.",
+        options: ["than", "then", "when", "that"],
+        a: 0,
+        why: "No sooner … than : dès que. Then indique la conséquence, pas la corrélation."
+      },
+      {
+        id: "en-t-b2-18", skill: "grammar",
+        q: "Had we invested earlier, we ___ more customers.",
+        options: ["would have attracted", "would attract", "had attracted", "will attract"],
+        a: 0,
+        why: "Had we invested = If we had invested ; conséquence passée : would have + participe."
+      },
+      {
+        id: "en-t-b2-19", skill: "grammar",
+        q: "It's high time we ___ this process.",
+        options: ["reviewed", "review", "to review", "reviewing"],
+        a: 0,
+        why: "It's high time + prétérit : cela exprime une urgence avec une action pas encore faite."
+      },
+      {
+        id: "en-t-b2-20", skill: "grammar",
+        q: "By next June, we ___ the new system.",
+        options: ["will have installed", "will install", "have installed", "are installing"],
+        a: 0,
+        why: "Future perfect : action terminée avant une date future (by next June)."
+      },
+      {
+        id: "en-t-b2-21", skill: "grammar",
+        q: "The team ___ working on the project for six months when the client left.",
+        options: ["had been", "has been", "was", "were"],
+        a: 0,
+        why: "Past perfect continuous : had been + -ing, durée avant un repère passé."
+      },
+      {
+        id: "en-t-b2-22", skill: "grammar",
+        q: "___ the bad weather, the launch went ahead.",
+        options: ["In spite of", "Although", "Despite of", "Even"],
+        a: 0,
+        why: "In spite of + nom (ou -ing). Although introduit une proposition complète ; « despite of » n'existe pas."
+      },
+      {
+        id: "en-t-b2-23", skill: "grammar",
+        q: "Sales rose in the north, ___ fell in the south.",
+        options: ["whereas", "although", "despite", "therefore"],
+        a: 0,
+        why: "Whereas marque le contraste entre deux propositions. Therefore exprime la conséquence."
+      },
+      {
+        id: "en-t-b2-24", skill: "grammar",
+        q: "The new system allows orders ___ faster.",
+        options: ["to be processed", "processing", "process", "be processed"],
+        a: 0,
+        why: "Allow + objet + to be + participe passé (passif à l'infinitif)."
+      },
+      {
+        id: "en-t-b2-25", skill: "grammar",
+        q: "We would have signed the contract if the terms ___ clearer.",
+        options: ["had been", "were", "have been", "are"],
+        a: 0,
+        why: "Third conditional : if + had been, would have + participe."
+      },
+      {
+        id: "en-t-b2-26", skill: "grammar",
+        q: "He is said ___ the best negotiator in the team.",
+        options: ["to be", "be", "being", "that he is"],
+        a: 0,
+        why: "Structure passive de report : is said to be."
+      },
+      {
+        id: "en-t-b2-27", skill: "grammar",
+        q: "The warehouse ___ at weekends.",
+        options: ["isn't staffed", "doesn't staff", "isn't staffing", "not staffed"],
+        a: 0,
+        why: "Passif négatif au présent : isn't + participe passé (staffed)."
+      },
+      {
+        id: "en-t-b2-28", skill: "grammar",
+        q: "I wish we ___ the contract more carefully.",
+        options: ["had read", "read", "have read", "would read"],
+        a: 0,
+        why: "I wish + past perfect exprime un regret sur le passé : had read."
+      },
+      {
+        id: "en-t-b2-29", skill: "grammar",
+        q: "The more we automate, ___ the process becomes.",
+        options: ["the faster", "the fast", "faster", "the fastest"],
+        a: 0,
+        why: "Comparatif corrélé : the more …, the faster …"
+      },
+      {
+        id: "en-t-b2-30", skill: "grammar",
+        q: "It is no use ___ about the delay now.",
+        options: ["complaining", "complain", "to complain", "complained"],
+        a: 0,
+        why: "It is no use + verbe en -ing : cela ne sert à rien de…"
+      },
+      {
+        id: "en-t-b2-31", skill: "vocab",
+        q: "The two companies signed a ___ after six months of talks.",
+        options: ["contract", "contact", "contrast", "contest"],
+        a: 0,
+        why: "Contract = contrat. Contact = contact : c'est un faux ami proche à l'écrit."
+      },
+      {
+        id: "en-t-b2-32", skill: "vocab",
+        q: "We need to ___ out the new pricing policy to all stores.",
+        options: ["roll", "roll in", "roll up", "roll over"],
+        a: 0,
+        why: "Roll out = déployer progressivement. Roll up = enrouler ; roll over = reporter."
+      },
+      {
+        id: "en-t-b2-33", skill: "vocab",
+        q: "The supplier agreed to ___ the old packaging.",
+        options: ["phase out", "phase in", "phase off", "phase up"],
+        a: 0,
+        why: "Phase out = supprimer progressivement. Phase in = introduire progressivement."
+      },
+      {
+        id: "en-t-b2-34", skill: "vocab",
+        q: "She ___ a proposal to reduce waste.",
+        options: ["put forward", "put off", "put up", "put out"],
+        a: 0,
+        why: "Put forward = présenter une proposition. Put off = reporter."
+      },
+      {
+        id: "en-t-b2-35", skill: "vocab",
+        q: "We must ___ up the pros and cons before deciding.",
+        options: ["weigh", "weight", "wait", "watch"],
+        a: 0,
+        why: "Weigh up = peser le pour et le contre. Weight est le nom (poids)."
+      },
+      {
+        id: "en-t-b2-36", skill: "vocab",
+        q: "The group will ___ its smaller stores next year.",
+        options: ["take over", "take off", "take in", "take up"],
+        a: 0,
+        why: "Take over = reprendre, racheter une activité. Take off = décoller."
+      },
+      {
+        id: "en-t-b2-37", skill: "vocab",
+        q: "Actually, the meeting is on Thursday, not Tuesday.",
+        options: ["In fact", "Currently", "Eventually", "At present"],
+        a: 0,
+        why: "Actually = en fait (faux ami). Currently = actuellement ; eventually = finalement."
+      },
+      {
+        id: "en-t-b2-38", skill: "vocab",
+        q: "The team ___ the survey in three regions.",
+        options: ["carried out", "carried on", "carried off", "carried away"],
+        a: 0,
+        why: "Carry out = réaliser, mener à bien. Carry on = continuer."
+      },
+      {
+        id: "en-t-b2-39", skill: "vocab",
+        q: "The results were ___ our expectations.",
+        options: ["below", "beneath", "under", "down"],
+        a: 0,
+        why: "Below expectations = en dessous des attentes. Beneath est plus concret (sous un objet)."
+      },
+      {
+        id: "en-t-b2-40", skill: "vocab",
+        q: "The manager asked for a ___ of the costs.",
+        options: ["breakdown", "break down", "breaking", "breaks"],
+        a: 0,
+        why: "Breakdown (nom) = décomposition, ventilation. Break down est le verbe."
+      },
+      {
+        id: "en-t-b2-41", skill: "vocab",
+        q: "We are ___ to offer you a 5 % discount.",
+        options: ["pleased", "pleasant", "pleasing", "pleasure"],
+        a: 0,
+        why: "Pleased = content, satisfait (pour une personne). Pleasant = agréable (pour une chose)."
+      },
+      {
+        id: "en-t-b2-42", skill: "vocab",
+        q: "The project is ___ schedule because of the strike.",
+        options: ["behind", "after", "late", "under"],
+        a: 0,
+        why: "Behind schedule = en retard sur le planning. Ahead of schedule = en avance."
+      },
+      {
+        id: "en-t-b2-43", skill: "reading",
+        passage: "Customer satisfaction rose after we added a second checkout, while complaints about waiting times fell by a third. Staff, however, report more pressure at peak hours.",
+        q: "What is the drawback?",
+        options: ["More pressure at peak hours", "Fewer checkouts", "Lower satisfaction", "Longer queues"],
+        a: 0,
+        why: "« Staff, however, report more pressure at peak hours » : « however » introduit le point négatif."
+      },
+      {
+        id: "en-t-b2-44", skill: "reading",
+        passage: "Our contract with the current supplier ends in June. The purchasing team has shortlisted three alternatives, but none matches the current delivery times.",
+        q: "What is the problem with the alternatives?",
+        options: ["Their delivery times", "Their prices", "Their location", "Their size"],
+        a: 0,
+        why: "« none matches the current delivery times » : aucun n'égale les délais actuels."
+      },
+      {
+        id: "en-t-b2-45", skill: "reading",
+        passage: "The training budget has been cut by 15 %. Managers may now approve only courses directly linked to a current project.",
+        q: "Which courses can managers approve?",
+        options: ["Those linked to a current project", "All courses", "Only language courses", "No courses"],
+        a: 0,
+        why: "« only courses directly linked to a current project » : la restriction est explicite."
+      },
+      {
+        id: "en-t-b2-46", skill: "reading",
+        passage: "Because of new regulations, all invoices must now include the supplier's registration number. Invoices without it will be returned.",
+        q: "What happens to invoices without the number?",
+        options: ["They are returned", "They are paid late", "They are accepted", "They are archived"],
+        a: 0,
+        why: "« Invoices without it will be returned » : elles sont renvoyées."
+      },
+      {
+        id: "en-t-b2-47", skill: "reading",
+        passage: "The board approved the merger, subject to approval by the competition authority. The deal is expected to close in the autumn.",
+        q: "What is still needed?",
+        options: ["Approval by the competition authority", "Approval by staff", "A new board", "A bank loan"],
+        a: 0,
+        why: "« subject to approval by the competition authority » : sous réserve de cet accord."
+      },
+      {
+        id: "en-t-b2-48", skill: "reading",
+        passage: "Our online sales grew by 40 % last year while shop sales stayed flat. The company therefore plans to invest in the website rather than in new stores.",
+        q: "Where will the company invest?",
+        options: ["In the website", "In new stores", "In advertising", "In staff"],
+        a: 0,
+        why: "« invest in the website rather than in new stores »."
       }
     ],
 
@@ -450,6 +1482,264 @@ window.COURSES.en = {
         options: ["be answered", "is answered", "will be answered", "answers"],
         a: 0,
         why: "Subjonctif après It is essential that : base verbale, ici au passif (be answered)."
+      },
+      {
+        id: "en-t-c1-13", skill: "grammar",
+        q: "Only when the audit was complete ___ the true cost.",
+        options: ["did we learn", "we learned", "we did learn", "learned we"],
+        a: 0,
+        why: "Only when + inversion de l'auxiliaire : did we learn (did + base verbale)."
+      },
+      {
+        id: "en-t-c1-14", skill: "grammar",
+        q: "Should you ___ further information, please contact me.",
+        options: ["require", "requires", "required", "requiring"],
+        a: 0,
+        why: "Conditionnel formel sans if : Should you require = If you should require. Base verbale après should."
+      },
+      {
+        id: "en-t-c1-15", skill: "grammar",
+        q: "The recommendation ___ by the board is still under discussion.",
+        options: ["made", "making", "make", "makes"],
+        a: 0,
+        why: "Proposition participiale au passif : made by the board = qui a été faite par le conseil."
+      },
+      {
+        id: "en-t-c1-16", skill: "grammar",
+        q: "Having ___ the report, she sent it to the client.",
+        options: ["finished", "finish", "finishes", "finishing"],
+        a: 0,
+        why: "Having + participe passé marque une action antérieure : après avoir terminé."
+      },
+      {
+        id: "en-t-c1-17", skill: "grammar",
+        q: "The committee, ___ members were appointed in May, meets quarterly.",
+        options: ["whose", "who", "which", "whom"],
+        a: 0,
+        why: "Whose marque l'appartenance : dont les membres."
+      },
+      {
+        id: "en-t-c1-18", skill: "grammar",
+        q: "The data ___ we based our conclusion were incomplete.",
+        options: ["on which", "which", "that", "where"],
+        a: 0,
+        why: "Base something on something → on which. La préposition reste en tête."
+      },
+      {
+        id: "en-t-c1-19", skill: "grammar",
+        q: "Not until the invoice was paid ___ the order dispatched.",
+        options: ["was", "were", "is", "did"],
+        a: 0,
+        why: "Not until en tête de phrase entraîne l'inversion : was the order dispatched (passif)."
+      },
+      {
+        id: "en-t-c1-20", skill: "grammar",
+        q: "The board recommended that the policy ___ reviewed annually.",
+        options: ["be", "is", "was", "will be"],
+        a: 0,
+        why: "Subjonctif après recommend that : base verbale, au passif be reviewed."
+      },
+      {
+        id: "en-t-c1-21", skill: "grammar",
+        q: "The results were better ___ expected.",
+        options: ["than", "that", "as", "from"],
+        a: 0,
+        why: "Comparatif : better than. On ne dit pas better that."
+      },
+      {
+        id: "en-t-c1-22", skill: "grammar",
+        q: "The contract is due ___ signed next week.",
+        options: ["to be", "be", "being", "for"],
+        a: 0,
+        why: "Be due to be + participe passé : doit être signé."
+      },
+      {
+        id: "en-t-c1-23", skill: "grammar",
+        q: "There is little ___ can be done at this stage.",
+        options: ["that", "which", "who", "what"],
+        a: 0,
+        why: "Après little, on emploie that comme relatif, pas which."
+      },
+      {
+        id: "en-t-c1-24", skill: "grammar",
+        q: "She is the only person ___ the details.",
+        options: ["to know", "knowing", "knows", "know"],
+        a: 0,
+        why: "The only + nom + infinitif : the only person to know."
+      },
+      {
+        id: "en-t-c1-25", skill: "grammar",
+        q: "___ the deadline was tight, the team delivered on time.",
+        options: ["Although", "Despite", "In spite", "However"],
+        a: 0,
+        why: "Although + proposition complète (sujet + verbe). Despite et in spite of introduisent un nom."
+      },
+      {
+        id: "en-t-c1-26", skill: "grammar",
+        q: "The forecast, ___ uncertain, is still useful.",
+        options: ["albeit", "although", "despite", "however"],
+        a: 0,
+        why: "Albeit + adjectif ou groupe sans verbe : albeit uncertain = quoiqu'incertain."
+      },
+      {
+        id: "en-t-c1-27", skill: "grammar",
+        q: "Hardly ___ the meeting started when the fire alarm rang.",
+        options: ["had", "has", "did", "was"],
+        a: 0,
+        why: "Hardly … when, avec past perfect inversé : had the meeting started."
+      },
+      {
+        id: "en-t-c1-28", skill: "grammar",
+        q: "The more data we collect, the ___ the analysis becomes.",
+        options: ["more reliable", "reliable", "most reliable", "reliably"],
+        a: 0,
+        why: "Comparatif corrélé : the more …, the more reliable …"
+      },
+      {
+        id: "en-t-c1-29", skill: "grammar",
+        q: "We would rather the decision ___ postponed.",
+        options: ["were", "be", "is", "was"],
+        a: 0,
+        why: "Would rather + prétérit (were) pour exprimer un souhait sur le présent."
+      },
+      {
+        id: "en-t-c1-30", skill: "grammar",
+        q: "Of the two options, the second is ___.",
+        options: ["the more expensive", "more expensive", "the most expensive", "most expensive"],
+        a: 0,
+        why: "Comparaison entre deux éléments : the more expensive. Le superlatif sert pour trois éléments ou plus."
+      },
+      {
+        id: "en-t-c1-31", skill: "vocab",
+        q: "The team must ___ the risks before launch.",
+        options: ["mitigate", "militate", "mediate", "migrate"],
+        a: 0,
+        why: "Mitigate = atténuer, réduire. Militate = plaider (militate against)."
+      },
+      {
+        id: "en-t-c1-32", skill: "vocab",
+        q: "We carried out due ___ on the supplier.",
+        options: ["diligence", "diligent", "diligently", "indulgence"],
+        a: 0,
+        why: "Due diligence = audit préalable, vérifications approfondies."
+      },
+      {
+        id: "en-t-c1-33", skill: "vocab",
+        q: "The process was ___ to remove duplication.",
+        options: ["streamlined", "stream", "streaming", "streams"],
+        a: 0,
+        why: "Streamline = simplifier, rationaliser un processus."
+      },
+      {
+        id: "en-t-c1-34", skill: "vocab",
+        q: "Staff ___ has fallen since the new manager arrived.",
+        options: ["attrition", "attribution", "attention", "attitude"],
+        a: 0,
+        why: "Attrition = départs progressifs, usure des effectifs (staff attrition)."
+      },
+      {
+        id: "en-t-c1-35", skill: "vocab",
+        q: "We need a ___ plan in case the supplier fails.",
+        options: ["contingency", "continuity", "convenience", "currency"],
+        a: 0,
+        why: "Contingency plan = plan de secours. Business continuity désigne la continuité d'activité."
+      },
+      {
+        id: "en-t-c1-36", skill: "vocab",
+        q: "The main ___ in the process is the manual approval.",
+        options: ["bottleneck", "backlog", "bottle", "backup"],
+        a: 0,
+        why: "Bottleneck = goulot d'étranglement. Backlog = arriéré de tâches."
+      },
+      {
+        id: "en-t-c1-37", skill: "vocab",
+        q: "The company must comply ___ the new regulations.",
+        options: ["with", "to", "for", "on"],
+        a: 0,
+        why: "Comply with = respecter une règle. On ne dit pas comply to."
+      },
+      {
+        id: "en-t-c1-38", skill: "vocab",
+        q: "The audit found several ___ of non-compliance.",
+        options: ["instances", "instants", "insistence", "distances"],
+        a: 0,
+        why: "Instance = cas, occurrence. Instants = des instants (temps)."
+      },
+      {
+        id: "en-t-c1-39", skill: "vocab",
+        q: "The proposal was ___ on the grounds that it was too costly.",
+        options: ["turned down", "turned up", "turned out", "turned in"],
+        a: 0,
+        why: "Turn down = refuser. Turn out = se révéler ; turn up = arriver."
+      },
+      {
+        id: "en-t-c1-40", skill: "vocab",
+        q: "This decision could have serious ___ for the whole group.",
+        options: ["implications", "applications", "imitations", "invitations"],
+        a: 0,
+        why: "Implications = conséquences, répercussions."
+      },
+      {
+        id: "en-t-c1-41", skill: "vocab",
+        q: "The launch ___ with the holiday period.",
+        options: ["coincided", "coincidence", "coinciding", "coincides"],
+        a: 0,
+        why: "Coincide with = coïncider avec. Le récit est au passé : coincided."
+      },
+      {
+        id: "en-t-c1-42", skill: "vocab",
+        q: "The report was ___ by an independent expert.",
+        options: ["scrutinised", "scrutiny", "scrutinising", "scrutinise"],
+        a: 0,
+        why: "Scrutinise = examiner en détail. Scrutiny est le nom."
+      },
+      {
+        id: "en-t-c1-43", skill: "reading",
+        passage: "The consultation showed strong support for the plan among store managers, but resistance among warehouse staff, who fear longer shifts. The report suggests a phased rollout with a review after three months.",
+        q: "What does the report suggest?",
+        options: ["A phased rollout", "Cancelling the plan", "Longer shifts", "A new consultation"],
+        a: 0,
+        why: "« a phased rollout with a review after three months » : déploiement par étapes."
+      },
+      {
+        id: "en-t-c1-44", skill: "reading",
+        passage: "Although the new supplier is cheaper, its quality record is weaker: two deliveries were rejected last year. Procurement recommends a trial period with strict quality checks.",
+        q: "Why is procurement cautious?",
+        options: ["The quality record", "The price", "The location", "The delivery speed"],
+        a: 0,
+        why: "« its quality record is weaker » : deux livraisons refusées l'an dernier."
+      },
+      {
+        id: "en-t-c1-45", skill: "reading",
+        passage: "The company's carbon target covers its own stores but not its supply chain, which accounts for most emissions. Campaigners argue the target is therefore incomplete.",
+        q: "What do campaigners criticise?",
+        options: ["The scope of the target", "The cost of the target", "The speed of delivery", "The number of stores"],
+        a: 0,
+        why: "« the target is therefore incomplete » : le périmètre (scope) exclut la chaîne d'approvisionnement."
+      },
+      {
+        id: "en-t-c1-46", skill: "reading",
+        passage: "Remote staff report higher focus but fewer informal exchanges with colleagues. The HR team proposes monthly on-site days, without making attendance compulsory.",
+        q: "What does HR propose?",
+        options: ["Monthly on-site days", "Compulsory attendance", "Ending remote work", "Fewer meetings"],
+        a: 0,
+        why: "« proposes monthly on-site days, without making attendance compulsory »."
+      },
+      {
+        id: "en-t-c1-47", skill: "reading",
+        passage: "The merger would give the group a 35 % share of the local market. The regulator may require the sale of some stores before approving the deal.",
+        q: "What might the regulator require?",
+        options: ["The sale of some stores", "A price increase", "New management", "More staff"],
+        a: 0,
+        why: "« may require the sale of some stores before approving the deal »."
+      },
+      {
+        id: "en-t-c1-48", skill: "reading",
+        passage: "The pilot cut waiting times by half, but only in stores with two tills. In smaller stores, the equipment took up space needed for stock.",
+        q: "Where did the pilot work less well?",
+        options: ["In smaller stores", "In large stores", "In city centres", "Online"],
+        a: 0,
+        why: "« In smaller stores, the equipment took up space needed for stock »."
       }
     ],
 
@@ -539,6 +1829,264 @@ window.COURSES.en = {
         options: ["No sooner", "Hardly", "Barely", "Scarcely"],
         a: 0,
         why: "No sooner … than. Hardly, barely et scarcely se construisent avec when."
+      },
+      {
+        id: "en-t-c2-13", skill: "grammar",
+        q: "___ it not been for the audit, the fraud would have gone unnoticed.",
+        options: ["Had", "Were", "Should", "If"],
+        a: 0,
+        why: "Had it not been for = If it had not been for. Inversion du conditionnel passé."
+      },
+      {
+        id: "en-t-c2-14", skill: "grammar",
+        q: "Were it not ___ the deadline, we would extend the pilot.",
+        options: ["for", "of", "to", "with"],
+        a: 0,
+        why: "Were it not for + nom = sans… La formule garde la préposition for."
+      },
+      {
+        id: "en-t-c2-15", skill: "grammar",
+        q: "Not until the report was leaked ___ aware of the risk.",
+        options: ["did the public become", "the public became", "became the public", "the public did become"],
+        a: 0,
+        why: "Not until en tête de phrase : inversion avec l'auxiliaire did."
+      },
+      {
+        id: "en-t-c2-16", skill: "grammar",
+        q: "So severe ___ the shortage that orders were suspended.",
+        options: ["was", "were", "it was", "had"],
+        a: 0,
+        why: "So + adjectif en tête de phrase entraîne l'inversion : So severe was the shortage…"
+      },
+      {
+        id: "en-t-c2-17", skill: "grammar",
+        q: "Such ___ the demand that the site crashed.",
+        options: ["was", "were", "it", "had"],
+        a: 0,
+        why: "Such + inversion : Such was the demand that… (une telle demande que…)."
+      },
+      {
+        id: "en-t-c2-18", skill: "grammar",
+        q: "Far from ___ the issue, the report obscured it.",
+        options: ["resolving", "resolve", "resolved", "to resolve"],
+        a: 0,
+        why: "Far from + verbe en -ing : loin de résoudre."
+      },
+      {
+        id: "en-t-c2-19", skill: "grammar",
+        q: "The decision, ___ controversial, was widely supported.",
+        options: ["though", "although", "despite", "however"],
+        a: 0,
+        why: "Though peut se placer après le nom sans changer la structure : the decision, though controversial."
+      },
+      {
+        id: "en-t-c2-20", skill: "grammar",
+        q: "Only by ___ the process can we cut delays.",
+        options: ["simplifying", "simplify", "simplified", "to simplify"],
+        a: 0,
+        why: "By + verbe en -ing. L'inversion vient après le groupe introduit par Only."
+      },
+      {
+        id: "en-t-c2-21", skill: "grammar",
+        q: "The more the company expands, ___ control it has over quality.",
+        options: ["the less", "the little", "less", "lesser"],
+        a: 0,
+        why: "Comparatif corrélé : the more …, the less …"
+      },
+      {
+        id: "en-t-c2-22", skill: "grammar",
+        q: "The figures ___, the board approved the budget.",
+        options: ["having been checked", "having checked", "been checked", "checked"],
+        a: 0,
+        why: "Proposition participiale absolue au passif : les chiffres ayant été vérifiés."
+      },
+      {
+        id: "en-t-c2-23", skill: "grammar",
+        q: "It was not until 2024 ___ the policy changed.",
+        options: ["that", "when", "which", "what"],
+        a: 0,
+        why: "Structure clivée : It was not until … that …"
+      },
+      {
+        id: "en-t-c2-24", skill: "grammar",
+        q: "The manager would sooner resign ___ accept the deal.",
+        options: ["than", "then", "that", "as"],
+        a: 0,
+        why: "Would sooner … than : préférer … plutôt que de."
+      },
+      {
+        id: "en-t-c2-25", skill: "grammar",
+        q: "There ___ no further questions, the chair closed the meeting.",
+        options: ["being", "was", "were", "is"],
+        a: 0,
+        why: "There being + nom : proposition participiale (comme il n'y avait plus de questions)."
+      },
+      {
+        id: "en-t-c2-26", skill: "grammar",
+        q: "The deal is ___ to fail unless the regulator intervenes.",
+        options: ["bound", "bind", "binding", "bounded"],
+        a: 0,
+        why: "Be bound to + infinitif = être voué à, ne pas manquer de."
+      },
+      {
+        id: "en-t-c2-27", skill: "grammar",
+        q: "He objected to ___ treated as a junior partner.",
+        options: ["being", "be", "to be", "been"],
+        a: 0,
+        why: "Object to + verbe en -ing ; ici au passif : being treated."
+      },
+      {
+        id: "en-t-c2-28", skill: "grammar",
+        q: "The scheme was abandoned ___ the cost to small stores.",
+        options: ["owing to", "in order to", "so as to", "according to"],
+        a: 0,
+        why: "Owing to + nom exprime la cause. In order to introduit un but."
+      },
+      {
+        id: "en-t-c2-29", skill: "grammar",
+        q: "The company's profits, ___ had been forecast, rose sharply.",
+        options: ["as", "like", "that", "which"],
+        a: 0,
+        why: "As had been forecast = comme cela avait été prévu. As reprend toute la proposition."
+      },
+      {
+        id: "en-t-c2-30", skill: "grammar",
+        q: "Scarcely ___ the plan been approved when the funding was withdrawn.",
+        options: ["had", "has", "did", "was"],
+        a: 0,
+        why: "Scarcely … when, avec past perfect inversé : had the plan been approved."
+      },
+      {
+        id: "en-t-c2-31", skill: "vocab",
+        q: "The costs were cut, but ___ the expense of quality.",
+        options: ["at", "in", "on", "for"],
+        a: 0,
+        why: "At the expense of = aux dépens de."
+      },
+      {
+        id: "en-t-c2-32", skill: "vocab",
+        q: "The findings ___ the initial hypothesis.",
+        options: ["bear out", "bear with", "bear up", "bear down"],
+        a: 0,
+        why: "Bear out = confirmer. Bear with = patienter ; bear up = tenir le coup."
+      },
+      {
+        id: "en-t-c2-33", skill: "vocab",
+        q: "The project fell short ___ expectations.",
+        options: ["of", "on", "to", "for"],
+        a: 0,
+        why: "Fall short of = ne pas atteindre (un niveau, une attente)."
+      },
+      {
+        id: "en-t-c2-34", skill: "vocab",
+        q: "The delay ___ from a failure to plan.",
+        options: ["stemmed", "stem", "stemming", "stems"],
+        a: 0,
+        why: "Stem from = découler de. Le récit est au passé : stemmed."
+      },
+      {
+        id: "en-t-c2-35", skill: "vocab",
+        q: "The decision was tantamount ___ a refusal.",
+        options: ["to", "of", "for", "with"],
+        a: 0,
+        why: "Be tantamount to = équivaloir à."
+      },
+      {
+        id: "en-t-c2-36", skill: "vocab",
+        q: "On the face ___ it, the offer looks generous.",
+        options: ["of", "on", "in", "at"],
+        a: 0,
+        why: "On the face of it = à première vue."
+      },
+      {
+        id: "en-t-c2-37", skill: "vocab",
+        q: "The proposal is still a ___ point among the partners.",
+        options: ["moot", "mute", "mode", "mood"],
+        a: 0,
+        why: "A moot point = une question discutable, non tranchée."
+      },
+      {
+        id: "en-t-c2-38", skill: "vocab",
+        q: "By and ___, the new system has worked well.",
+        options: ["large", "larger", "largely", "enlarge"],
+        a: 0,
+        why: "By and large = dans l'ensemble (expression figée)."
+      },
+      {
+        id: "en-t-c2-39", skill: "vocab",
+        q: "The change was, to all intents and ___, a merger.",
+        options: ["purposes", "purpose", "purports", "proposals"],
+        a: 0,
+        why: "To all intents and purposes = en pratique, pour ainsi dire."
+      },
+      {
+        id: "en-t-c2-40", skill: "vocab",
+        q: "The regulator's decision gave ___ to a wave of complaints.",
+        options: ["rise", "raise", "arise", "rose"],
+        a: 0,
+        why: "Give rise to = donner lieu à, susciter."
+      },
+      {
+        id: "en-t-c2-41", skill: "vocab",
+        q: "The company has been accused of greenwashing, ___ its sustainability claims.",
+        options: ["notwithstanding", "nevertheless", "however", "therefore"],
+        a: 0,
+        why: "Notwithstanding + nom = malgré, en dépit de."
+      },
+      {
+        id: "en-t-c2-42", skill: "vocab",
+        q: "The report stops ___ of calling for a public inquiry.",
+        options: ["short", "shortly", "shorts", "shortening"],
+        a: 0,
+        why: "Stop short of + -ing = s'arrêter juste avant de."
+      },
+      {
+        id: "en-t-c2-43", skill: "reading",
+        passage: "The review concludes that the scheme met its targets but at a cost the company can no longer sustain. It recommends keeping the pilot running at a reduced scale while alternative funding is sought.",
+        q: "What does the review recommend?",
+        options: ["Keeping a reduced pilot", "Ending the scheme", "Raising prices", "Expanding the scheme"],
+        a: 0,
+        why: "« keeping the pilot running at a reduced scale » : maintenir à échelle réduite."
+      },
+      {
+        id: "en-t-c2-44", skill: "reading",
+        passage: "Far from resolving the dispute, the announcement hardened positions on both sides. Negotiators now fear that a settlement is further away than ever.",
+        q: "What was the effect of the announcement?",
+        options: ["It hardened positions", "It settled the dispute", "It reduced costs", "It delayed the launch"],
+        a: 0,
+        why: "« the announcement hardened positions on both sides » : les positions se sont durcies."
+      },
+      {
+        id: "en-t-c2-45", skill: "reading",
+        passage: "The data are suggestive but not conclusive: the sample was small and drawn from a single region. The authors caution against generalising the findings.",
+        q: "Why do the authors urge caution?",
+        options: ["The sample was small", "The data were lost", "The region was rich", "The method was new"],
+        a: 0,
+        why: "« the sample was small and drawn from a single region » : échantillon limité."
+      },
+      {
+        id: "en-t-c2-46", skill: "reading",
+        passage: "Management presents the restructure as a response to market pressure. Staff representatives, by contrast, see it as a long-planned cost reduction that the crisis made easier to justify.",
+        q: "How do staff representatives see the restructure?",
+        options: ["As long-planned cost cutting", "As a market necessity", "As a temporary measure", "As a legal requirement"],
+        a: 0,
+        why: "« see it as a long-planned cost reduction » : réduction des coûts prévue de longue date."
+      },
+      {
+        id: "en-t-c2-47", skill: "reading",
+        passage: "The supplier's silence on the delay was, in the client's view, as good as an admission of fault. The contract allows termination after two missed deadlines.",
+        q: "What does the contract allow?",
+        options: ["Termination after two missed deadlines", "A price increase", "A shorter warranty", "Immediate payment"],
+        a: 0,
+        why: "« allows termination after two missed deadlines » : résiliation possible."
+      },
+      {
+        id: "en-t-c2-48", skill: "reading",
+        passage: "Whatever the merits of the argument, the board is unlikely to reverse a decision it took unanimously. The practical question is how to limit the damage.",
+        q: "What is the board unlikely to do?",
+        options: ["Reverse its decision", "Limit the damage", "Meet the staff", "Publish the minutes"],
+        a: 0,
+        why: "« the board is unlikely to reverse a decision it took unanimously »."
       }
     ]
   },

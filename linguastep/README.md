@@ -27,10 +27,10 @@ assets/
   dans un test.
 - **Tirage aléatoire et renouvellement** : les questions sont piochées au hasard
   dans une réserve, et l'application retient celles déjà vues pour ne pas les
-  reposer. L'anglais dispose de **12 questions par niveau (72 au total)**, soit
-  quatre tests complets d'affilée sans répétition. Les cinq autres langues sont
+  reposer. L'anglais dispose de **48 questions par niveau (288 au total)**, soit
+  seize tests complets d'affilée sans répétition. Les cinq autres langues sont
   à 6 questions par niveau (36 chacune) ; leur extension est prévue.
-- **252 questions** de test au total, avec explication en français pour chaque
+- **468 questions** de test au total, avec explication en français pour chaque
   réponse.
 - 43 leçons et 185 exercices corrigés (QCM, complétion, remise en ordre).
 - Progression enregistrée dans le navigateur (`localStorage`), avec export et
