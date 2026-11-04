@@ -290,6 +290,7 @@
           '<div class="step"><span class="n">A1</span><div><span class="t">On démarre à votre niveau</span><span class="d">Vous indiquez votre point de départ, le test affine ensuite.</span></div></div>' +
           '<div class="step"><span class="n">3</span><div><span class="t">Trois questions par palier</span><span class="d">Le score du palier décide de la suite : montée ou descente.</span></div></div>' +
           '<div class="step"><span class="n">✓</span><div><span class="t">Vous voyez vos erreurs</span><span class="d">Chaque question est corrigée et expliquée à la fin du test.</span></div></div>' +
+          '<div class="step"><span class="n">↻</span><div><span class="t">Des questions renouvelées</span><span class="d">Elles sont tirées au hasard dans une réserve : d\'un test à l\'autre, vous ne revoyez pas les mêmes tant qu\'il en reste.</span></div></div>' +
         '</div>' +
       '</div>';
   }
@@ -368,7 +369,7 @@
   /* ================= évaluation ================= */
   function startTest(level) {
     if (!readiness(S.lang).ok) { toast("Contenu en préparation pour cette langue."); return; }
-    S.test = E.newTest(S.lang, level || S.start || "A2");
+    S.test = E.newTest(S.lang, level || S.start || "A2", Store.getRecent(S.lang));
     S.testUI = { choice: null, checked: false };
     S.result = null;
     go("#/test");
@@ -452,6 +453,9 @@
     if (ui.choice == null) { toast("Choisissez une réponse."); return; }
     var r = E.submit(t, ui.choice);
     if (!r) return;
+    // Mémoire de renouvellement : la question ne reviendra pas au prochain test
+    // tant que la réserve de questions neuves du niveau n'est pas épuisée.
+    Store.addRecent(S.lang, [r.item.id]);
     S.testUI = { choice: ui.choice, checked: true, correct: r.correct, item: r.item };
     S.focus = '[data-act="tnext"]';
     render();

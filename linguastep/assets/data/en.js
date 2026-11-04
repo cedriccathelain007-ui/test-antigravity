@@ -51,6 +51,49 @@ window.COURSES.en = {
         options: ["quotation", "invoice", "receipt", "salary"],
         a: 0,
         why: "Quotation (ou quote) = devis. Invoice = facture ; receipt = ticket de caisse."
+      },
+      {
+        id: "en-t-a1-7", skill: "grammar",
+        q: "There isn't ___ milk left in the fridge.",
+        options: ["some", "any", "a", "many"],
+        a: 1,
+        why: "À la forme négative, on emploie any : there isn't any milk. Some s'utilise à l'affirmative."
+      },
+      {
+        id: "en-t-a1-8", skill: "vocab",
+        q: "I'd like to ___ a table for four, please.",
+        options: ["book", "buy", "open", "pay"],
+        a: 0,
+        why: "Book a table = réserver une table (usage britannique ; reserve se dit aussi)."
+      },
+      {
+        id: "en-t-a1-9", skill: "grammar",
+        q: "She ___ work on Sundays.",
+        options: ["don't", "doesn't", "isn't", "not"],
+        a: 1,
+        why: "Négation au présent simple, 3e personne du singulier : doesn't + base verbale."
+      },
+      {
+        id: "en-t-a1-10", skill: "vocab",
+        q: "The shop opens ___ 8 a.m. every day.",
+        options: ["at", "on", "in", "to"],
+        a: 0,
+        why: "At + heure précise (at 8 a.m.). On + jour, in + mois ou année."
+      },
+      {
+        id: "en-t-a1-11", skill: "reading",
+        passage: "Welcome to Mon-épicerie. We are open from Monday to Saturday, 8 a.m. to 8 p.m. On Sunday, we close at 1 p.m.",
+        q: "What time does the shop close on Sunday?",
+        options: ["8 p.m.", "1 p.m.", "8 a.m.", "6 p.m."],
+        a: 1,
+        why: "Le texte dit : « On Sunday, we close at 1 p.m. »."
+      },
+      {
+        id: "en-t-a1-12", skill: "vocab",
+        q: "Where do customers pay? At the ___.",
+        options: ["tills", "shelves", "stockroom", "office"],
+        a: 0,
+        why: "Till = caisse (britannique). Aux États-Unis, on dit cash register."
       }
     ],
 
@@ -97,6 +140,49 @@ window.COURSES.en = {
         options: ["put off", "put on", "put out", "put up"],
         a: 0,
         why: "Put off = reporter. Put on = organiser ; put up = loger."
+      },
+      {
+        id: "en-t-a2-7", skill: "grammar",
+        q: "I ___ the report yesterday morning.",
+        options: ["have sent", "sent", "send", "was sending"],
+        a: 1,
+        why: "Yesterday = moment précis et terminé → past simple (sent), pas present perfect."
+      },
+      {
+        id: "en-t-a2-8", skill: "vocab",
+        q: "We had to ___ the order because the item is out of stock.",
+        options: ["cancel", "celebrate", "calculate", "copy"],
+        a: 0,
+        why: "Cancel = annuler. Out of stock = en rupture de stock."
+      },
+      {
+        id: "en-t-a2-9", skill: "grammar",
+        q: "There are ___ products on the shelf than yesterday.",
+        options: ["less", "fewer", "few", "little"],
+        a: 1,
+        why: "Fewer + nom dénombrable pluriel. Less s'emploie avec l'indénombrable (less time)."
+      },
+      {
+        id: "en-t-a2-10", skill: "vocab",
+        q: "Could you ___ me a hand with these boxes?",
+        options: ["give", "do", "make", "take"],
+        a: 0,
+        why: "Give someone a hand = donner un coup de main."
+      },
+      {
+        id: "en-t-a2-11", skill: "reading",
+        passage: "Hi Sam, the stock check is on Friday morning. Please print the inventory list and bring it to the back office. We start at 7 a.m., before the shop opens.",
+        q: "What should Sam bring?",
+        options: ["The stock order", "The inventory list", "The shop keys", "A coffee"],
+        a: 1,
+        why: "Le message dit : « Please print the inventory list and bring it »."
+      },
+      {
+        id: "en-t-a2-12", skill: "vocab",
+        q: "The delivery will arrive ___ Tuesday morning.",
+        options: ["on", "in", "at", "by"],
+        a: 0,
+        why: "On + jour de la semaine (on Tuesday morning). By Tuesday = au plus tard mardi."
       }
     ],
 
@@ -143,6 +229,49 @@ window.COURSES.en = {
         options: ["break down", "break in", "break out", "break up"],
         a: 0,
         why: "Break down = décomposer, ventiler. Break out = éclater (conflit) ; break up = se séparer."
+      },
+      {
+        id: "en-t-b1-7", skill: "grammar",
+        q: "We ___ the stock when the lights went out.",
+        options: ["were checking", "checked", "have checked", "check"],
+        a: 0,
+        why: "Action en cours interrompue par un événement court : past continuous (were checking) + past simple."
+      },
+      {
+        id: "en-t-b1-8", skill: "vocab",
+        q: "The supplier will ___ the missing items tomorrow.",
+        options: ["deliver", "delivery", "delivering", "delivered"],
+        a: 0,
+        why: "Deliver = verbe ; delivery = nom. Après will, on met la base verbale."
+      },
+      {
+        id: "en-t-b1-9", skill: "grammar",
+        q: "The shop ___ open until 9 p.m., but now it closes at 7.",
+        options: ["used to", "use to", "is used to", "was used"],
+        a: 0,
+        why: "Used to + infinitif exprime une habitude passée qui n'existe plus."
+      },
+      {
+        id: "en-t-b1-10", skill: "vocab",
+        q: "The team will ___ up the display before Friday.",
+        options: ["set", "put", "take", "give"],
+        a: 0,
+        why: "Set up = installer, mettre en place. Put up = accrocher ; take up = occuper."
+      },
+      {
+        id: "en-t-b1-11", skill: "reading",
+        passage: "Since the new self-checkout tills were installed, queues at peak hours have shortened. Some customers, however, say they miss the help of a cashier when something goes wrong.",
+        q: "What do some customers miss?",
+        options: ["Lower prices", "The help of a cashier", "Faster tills", "The old shop"],
+        a: 1,
+        why: "« they miss the help of a cashier when something goes wrong »."
+      },
+      {
+        id: "en-t-b1-12", skill: "grammar",
+        q: "If we ___ the order today, it will arrive on Friday.",
+        options: ["place", "placed", "will place", "placing"],
+        a: 0,
+        why: "First conditional : if + présent simple, will + infinitif. Jamais will après if."
       }
     ],
 
@@ -189,6 +318,49 @@ window.COURSES.en = {
         options: ["bring down", "bring up", "bring in", "bring about"],
         a: 0,
         why: "Bring down = réduire. Bring up = soulever (un sujet) ; bring about = provoquer."
+      },
+      {
+        id: "en-t-b2-7", skill: "grammar",
+        q: "If she had checked the figures, we ___ the error earlier.",
+        options: ["would spot", "would have spotted", "will spot", "had spotted"],
+        a: 1,
+        why: "Third conditional : if + had + participe passé, would have + participe passé."
+      },
+      {
+        id: "en-t-b2-8", skill: "vocab",
+        q: "We had to ___ back the launch because of a supply problem.",
+        options: ["push", "pull", "put", "take"],
+        a: 0,
+        why: "Push back = reporter à plus tard. Pull back = se retirer ; take back = reprendre."
+      },
+      {
+        id: "en-t-b2-9", skill: "grammar",
+        q: "All deliveries ___ checked before they leave the warehouse.",
+        options: ["must be", "must", "must to be", "have must"],
+        a: 0,
+        why: "Modal + be + participe passé (passif) : must be checked. Must est suivi de la base verbale."
+      },
+      {
+        id: "en-t-b2-10", skill: "vocab",
+        q: "The board will ___ the proposal next week.",
+        options: ["discuss", "discuss about", "debate on", "argue"],
+        a: 0,
+        why: "Discuss + objet direct, sans about : c'est un faux ami de « discuter de »."
+      },
+      {
+        id: "en-t-b2-11", skill: "reading",
+        passage: "The new supplier offers lower prices, but its lead times are two weeks longer. The purchasing team therefore suggests a trial order before any long-term contract.",
+        q: "What does the purchasing team suggest?",
+        options: ["Signing immediately", "A trial order", "Refusing the supplier", "Increasing lead times"],
+        a: 1,
+        why: "« suggests a trial order before any long-term contract » : un essai avant l'engagement."
+      },
+      {
+        id: "en-t-b2-12", skill: "grammar",
+        q: "She asked me ___ the meeting had been postponed.",
+        options: ["if", "that", "what", "weather"],
+        a: 0,
+        why: "Question indirecte fermée : if (ou whether, plus formel). Weather = météo, homophone."
       }
     ],
 
@@ -235,6 +407,49 @@ window.COURSES.en = {
         options: ["hampered", "harnessed", "handled", "harboured"],
         a: 0,
         why: "Hamper = entraver, gêner. Harness = exploiter ; harbour = nourrir (un sentiment)."
+      },
+      {
+        id: "en-t-c1-7", skill: "grammar",
+        q: "No sooner ___ the results than the client called.",
+        options: ["had we published", "we had published", "we published", "did we published"],
+        a: 0,
+        why: "No sooner + had + sujet + participe passé … than : inversion après un adverbe négatif en tête."
+      },
+      {
+        id: "en-t-c1-8", skill: "vocab",
+        q: "The two proposals are ___; we cannot fund both.",
+        options: ["mutually exclusive", "mutually beneficial", "widely available", "highly competitive"],
+        a: 0,
+        why: "Mutually exclusive = qui s'excluent l'un l'autre. Mutually beneficial = profitable aux deux."
+      },
+      {
+        id: "en-t-c1-9", skill: "grammar",
+        q: "Were the funding ___, the project would start in June.",
+        options: ["approved", "approving", "approve", "to approve"],
+        a: 0,
+        why: "Conditionnel sans if : Were + sujet + participe passé (passif) = If the funding were approved."
+      },
+      {
+        id: "en-t-c1-10", skill: "vocab",
+        q: "The team managed to ___ the delay by working overtime.",
+        options: ["make up for", "make off with", "make out", "make over"],
+        a: 0,
+        why: "Make up for = compenser. Make off with = emporter ; make out = distinguer."
+      },
+      {
+        id: "en-t-c1-11", skill: "reading",
+        passage: "The audit found no evidence of fraud, but it criticised the lack of segregation of duties: the same person orders stock and approves invoices. The report recommends splitting these tasks without delay.",
+        q: "What does the audit criticise?",
+        options: ["Fraud", "The lack of segregation of duties", "The cost of the audit", "Overtime"],
+        a: 1,
+        why: "« it criticised the lack of segregation of duties » : une même personne commande et valide."
+      },
+      {
+        id: "en-t-c1-12", skill: "grammar",
+        q: "It is essential that every complaint ___ within 48 hours.",
+        options: ["be answered", "is answered", "will be answered", "answers"],
+        a: 0,
+        why: "Subjonctif après It is essential that : base verbale, ici au passif (be answered)."
       }
     ],
 
@@ -281,6 +496,49 @@ window.COURSES.en = {
         options: ["at the behest of", "on the verge of", "in the wake of", "by virtue of"],
         a: 0,
         why: "At the behest of = à la demande de. In the wake of = à la suite de ; by virtue of = en vertu de."
+      },
+      {
+        id: "en-t-c2-7", skill: "grammar",
+        q: "Only after the audit ___ the scale of the problem.",
+        options: ["did we realise", "we realised", "we did realise", "realised we"],
+        a: 0,
+        why: "Only after + inversion de l'auxiliaire : did we realise (did + base verbale)."
+      },
+      {
+        id: "en-t-c2-8", skill: "vocab",
+        q: "The board's decision was ___ by the shareholders' concerns.",
+        options: ["prompted", "promoted", "presumed", "prolonged"],
+        a: 0,
+        why: "Prompt = susciter, provoquer. Promote = promouvoir ; presume = supposer."
+      },
+      {
+        id: "en-t-c2-9", skill: "grammar",
+        q: "The figures, ___ were published late, had already been leaked.",
+        options: ["which", "that", "what", "who"],
+        a: 0,
+        why: "Relative non restrictive (entre virgules) : which. That ne s'emploie pas après une virgule."
+      },
+      {
+        id: "en-t-c2-10", skill: "vocab",
+        q: "The proposal was watered ___ before it reached the board.",
+        options: ["down", "off", "out", "up"],
+        a: 0,
+        why: "Water down = édulcorer, atténuer. Water off, out et up ne forment pas ces expressions."
+      },
+      {
+        id: "en-t-c2-11", skill: "reading",
+        passage: "The consultation revealed a paradox: staff welcomed the new tools but resented the pace of change. Management interpreted this as resistance, whereas the report reads it as a demand for training and time.",
+        q: "How does the report interpret the staff reaction?",
+        options: ["As resistance to change", "As a demand for training and time", "As support for management", "As indifference"],
+        a: 1,
+        why: "« whereas the report reads it as a demand for training and time » : « whereas » oppose deux lectures."
+      },
+      {
+        id: "en-t-c2-12", skill: "grammar",
+        q: "___ had the announcement been made than the shares fell.",
+        options: ["No sooner", "Hardly", "Barely", "Scarcely"],
+        a: 0,
+        why: "No sooner … than. Hardly, barely et scarcely se construisent avec when."
       }
     ]
   },

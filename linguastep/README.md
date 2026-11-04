@@ -12,8 +12,8 @@ italien, portugais, français FLE).
 index.html
 assets/
   css/style.css
-  js/store.js      stockage local, export/import JSON
-  js/engine.js     moteur du test adaptatif
+  js/store.js      stockage local, export/import JSON, mémoire des questions vues
+  js/engine.js     moteur du test adaptatif et tirage aléatoire
   js/app.js        écrans et interactions
   data/languages.js
   data/en.js  es.js  de.js  it.js  pt.js  fr.js
@@ -23,9 +23,15 @@ assets/
 
 - Site **statique** : aucune installation, aucun serveur, aucune dépendance.
 - Test adaptatif : 3 questions par palier, 2 bonnes réponses pour monter,
-  sinon on descend. Plafond de 18 questions, jamais deux fois la même question.
-- 6 langues × 6 niveaux × 6 questions = **216 questions** de test, avec
-  explication en français pour chaque réponse.
+  sinon on descend. Plafond de 18 questions, jamais deux fois la même question
+  dans un test.
+- **Tirage aléatoire et renouvellement** : les questions sont piochées au hasard
+  dans une réserve, et l'application retient celles déjà vues pour ne pas les
+  reposer. L'anglais dispose de **12 questions par niveau (72 au total)**, soit
+  quatre tests complets d'affilée sans répétition. Les cinq autres langues sont
+  à 6 questions par niveau (36 chacune) ; leur extension est prévue.
+- **252 questions** de test au total, avec explication en français pour chaque
+  réponse.
 - 43 leçons et 185 exercices corrigés (QCM, complétion, remise en ordre).
 - Progression enregistrée dans le navigateur (`localStorage`), avec export et
   import JSON. **Aucun compte, aucune donnée envoyée.**

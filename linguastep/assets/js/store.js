@@ -56,10 +56,34 @@ window.Store = (function () {
         xp: 0,
         streak: { count: 0, last: null },
         lessons: {},
-        review: []
+        review: [],
+        recent: []
       };
     }
+    if (!db.langs[code].recent) db.langs[code].recent = [];
     return db.langs[code];
+  }
+
+  /* Mémoire des questions déjà vues, par langue : sert au renouvellement
+     des tests. On garde les plus récentes. Le plafond dépasse la taille de
+     la plus grosse banque (72 questions en anglais) : ainsi une question ne
+     revient pas tant qu'il reste des questions neuves dans le niveau. */
+  var RECENT_CAP = 96;
+
+  function getRecent(code) {
+    return (langState(code).recent || []).slice();
+  }
+
+  function addRecent(code, ids) {
+    var st = langState(code);
+    var list = st.recent || [];
+    (ids || []).forEach(function (id) {
+      if (id && list.indexOf(id) === -1) list.push(id);
+    });
+    if (list.length > RECENT_CAP) list = list.slice(list.length - RECENT_CAP);
+    st.recent = list;
+    write();
+    return list.length;
   }
 
   function touchStreak(code) {
@@ -151,6 +175,8 @@ window.Store = (function () {
     read: read,
     write: write,
     langState: langState,
+    getRecent: getRecent,
+    addRecent: addRecent,
     touchStreak: touchStreak,
     addXp: addXp,
     setAssessment: setAssessment,

@@ -44,20 +44,32 @@ window.Engine = (function () {
 
   /* Sélection des 3 questions d'un palier : une compréhension écrite
      (si la banque en contient) + deux autres, tirées au hasard.
-     `asked` écarte les questions déjà posées : on ne repose jamais deux
-     fois la même question dans un même test. Si la banque d'un niveau
-     est épuisée, le test s'arrête (voir submit). */
-  function pickItems(code, level, asked) {
-    var pool = poolFor(code, level);
-    if (!pool.length) return [];
-    var seen = (asked || []).map(function (a) { return a.item; });
-    pool = pool.filter(function (i) { return seen.indexOf(i) === -1; });
+     `asked` écarte les questions déjà posées dans le test en cours.
+     `recent` contient les identifiants déjà vus lors des tests précédents :
+     on pioche d'abord dans les questions neuves, puis on complète avec les
+     anciennes si la banque est trop petite. Résultat : à chaque nouveau test,
+     l'apprenant voit des questions différentes tant que la réserve le permet. */
+  function drawThree(pool) {
     var reading = shuffle(pool.filter(function (i) { return i.skill === "reading"; }));
     var rest = shuffle(pool.filter(function (i) { return i.skill !== "reading"; }));
     var out = [];
     if (reading.length) out.push(reading.shift());
     while (out.length < 3 && rest.length) out.push(rest.shift());
     while (out.length < 3 && reading.length) out.push(reading.shift());
+    return out;
+  }
+
+  function pickItems(code, level, asked, recent) {
+    var pool = poolFor(code, level);
+    if (!pool.length) return [];
+    var seen = (asked || []).map(function (a) { return a.item; });
+    pool = pool.filter(function (i) { return seen.indexOf(i) === -1; });
+    var known = {};
+    (recent || []).forEach(function (id) { known[id] = true; });
+    var fresh = pool.filter(function (i) { return !known[i.id]; });
+    var old = pool.filter(function (i) { return known[i.id]; });
+    var out = drawThree(fresh);
+    if (out.length < 3) out = out.concat(drawThree(old).slice(0, 3 - out.length));
     return shuffle(out);
   }
 
@@ -65,7 +77,7 @@ window.Engine = (function () {
      Principe : 3 questions par niveau. 2 bonnes réponses ou plus → on monte.
      0 ou 1 → on descend. On s'arrête en haut (C2 validé) ou en bas (A1 échoué).
      9 à 18 questions en général ; moins si la banque d'un niveau est épuisée. */
-  function newTest(code, startLevel) {
+  function newTest(code, startLevel, recent) {
     var idx = Math.max(0, LEVELS.indexOf(startLevel || "A2"));
     var t = {
       code: code,
@@ -73,13 +85,14 @@ window.Engine = (function () {
       queue: null,
       qi: 0,
       asked: [],
+      recent: (recent || []).slice(),
       correctAtLevel: 0,
       passed: [],
       failed: [],
       finished: false,
       finalLevel: null
     };
-    t.queue = pickItems(t.code, LEVELS[idx]);
+    t.queue = pickItems(t.code, LEVELS[idx], [], t.recent);
     return t;
   }
 
@@ -119,7 +132,7 @@ window.Engine = (function () {
       }
       if (!t.finished && change) {
         t.level += change === "up" ? 1 : -1;
-        t.queue = pickItems(t.code, LEVELS[t.level], t.asked);
+        t.queue = pickItems(t.code, LEVELS[t.level], t.asked, t.recent);
         t.qi = 0;
         t.correctAtLevel = 0;
         // Banque épuisée pour ce niveau : on préfère arrêter plutôt que de
