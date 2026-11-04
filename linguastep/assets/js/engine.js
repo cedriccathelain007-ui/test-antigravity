@@ -59,18 +59,32 @@ window.Engine = (function () {
     return out;
   }
 
+  /* Les bonnes réponses sont souvent écrites en première position dans les
+     fichiers de contenu. On mélange donc l'ordre des propositions à chaque
+     tirage : la position de la bonne réponse ne donne aucun indice. */
+  function shuffleOptions(item) {
+    if (!item || !item.options || item.options.length < 2) return item;
+    var order = shuffle(item.options.map(function (_, k) { return k; }));
+    var copy = {};
+    Object.keys(item).forEach(function (k) { copy[k] = item[k]; });
+    copy.options = order.map(function (k) { return item.options[k]; });
+    copy.a = order.indexOf(item.a);
+    return copy;
+  }
+
   function pickItems(code, level, asked, recent) {
     var pool = poolFor(code, level);
     if (!pool.length) return [];
-    var seen = (asked || []).map(function (a) { return a.item; });
-    pool = pool.filter(function (i) { return seen.indexOf(i) === -1; });
+    var seen = {};
+    (asked || []).forEach(function (a) { if (a.item && a.item.id) seen[a.item.id] = true; });
+    pool = pool.filter(function (i) { return !seen[i.id]; });
     var known = {};
     (recent || []).forEach(function (id) { known[id] = true; });
     var fresh = pool.filter(function (i) { return !known[i.id]; });
     var old = pool.filter(function (i) { return known[i.id]; });
     var out = drawThree(fresh);
     if (out.length < 3) out = out.concat(drawThree(old).slice(0, 3 - out.length));
-    return shuffle(out);
+    return shuffle(out).map(shuffleOptions);
   }
 
   /* ---------- Test adaptatif ----------

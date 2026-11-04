@@ -24,13 +24,13 @@ assets/
 - Site **statique** : aucune installation, aucun serveur, aucune dépendance.
 - Test adaptatif : 3 questions par palier, 2 bonnes réponses pour monter,
   sinon on descend. Plafond de 18 questions, jamais deux fois la même question
-  dans un test.
+  dans un test. L'ordre des propositions est mélangé à chaque tirage.
 - **Tirage aléatoire et renouvellement** : les questions sont piochées au hasard
   dans une réserve, et l'application retient celles déjà vues pour ne pas les
-  reposer. L'anglais dispose de **48 questions par niveau (288 au total)**, soit
-  seize tests complets d'affilée sans répétition. Les cinq autres langues sont
+  reposer. L'anglais dispose de **12 questions par niveau (72 au total)**, soit
+  quatre tests complets d'affilée sans répétition. Les cinq autres langues sont
   à 6 questions par niveau (36 chacune) ; leur extension est prévue.
-- **468 questions** de test au total, avec explication en français pour chaque
+- **252 questions** de test au total, avec explication en français pour chaque
   réponse.
 - 43 leçons et 185 exercices corrigés (QCM, complétion, remise en ordre).
 - Progression enregistrée dans le navigateur (`localStorage`), avec export et
