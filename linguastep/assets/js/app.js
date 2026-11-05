@@ -282,7 +282,7 @@
 
     var isEn = S.lang === "en";
     return '<div class="card pad-lg">' +
-        '<div class="row-between"><h2 style="margin:0">Évaluation adaptative</h2>' +
+        '<div class="row-between"><h2 style="margin:0">' + (isEn ? "Évaluation de niveau" : "Évaluation adaptative") + '</h2>' +
         '<span class="pill">' + (isEn ? "≈ 15 min · 48 questions" : "≈ 6 min · 9 à 18 questions en général") + '</span></div>' +
         '<p class="lead" style="margin-top:10px">Répondez sans dictionnaire. ' +
         (isEn
@@ -297,9 +297,9 @@
         '</div>' +
       '</div>' +
       '<div class="card soft" style="margin-top:16px">' +
-        '<h3>Un test qui s\'adapte, pas un questionnaire figé</h3>' +
+        '<h3>' + (isEn ? "48 questions pour situer votre niveau" : "Un test qui s'adapte, pas un questionnaire figé") + '</h3>' +
         '<div class="steps">' +
-          '<div class="step"><span class="n">A1</span><div><span class="t">On démarre à votre niveau</span><span class="d">Vous indiquez votre point de départ, le test affine ensuite.</span></div></div>' +
+          '<div class="step"><span class="n">A1</span><div><span class="t">On démarre à votre niveau</span><span class="d">' + (isEn ? "Vous indiquez votre niveau estimé, le test vérifie s'il est juste." : "Vous indiquez votre point de départ, le test affine ensuite.") + '</span></div></div>' +
           '<div class="step"><span class="n">' + (isEn ? "48" : "3") + '</span><div><span class="t">' + (isEn ? "Quarante-huit questions, une note sur 20" : "Trois questions par palier") + '</span><span class="d">' + (isEn ? "36 bonnes réponses ou plus : niveau supérieur. 24 à 35 : niveau confirmé. Moins de 24 : niveau inférieur." : "Le score du palier décide de la suite : montée ou descente.") + '</span></div></div>' +
           '<div class="step"><span class="n">✓</span><div><span class="t">Vous voyez vos erreurs</span><span class="d">Chaque question est corrigée et expliquée à la fin du test.</span></div></div>' +
           '<div class="step"><span class="n">↻</span><div><span class="t">' + (isEn ? "Un ordre aléatoire" : "Des questions renouvelées") + '</span><span class="d">' + (isEn ? "Les 48 questions du niveau sont tirées dans un ordre aléatoire et les propositions sont mélangées à chaque test." : "Elles sont tirées au hasard dans une réserve : d\'un test à l\'autre, vous ne revoyez pas les mêmes tant qu\'il en reste.") + '</span></div></div>' +
