@@ -22,9 +22,12 @@ assets/
 ## Fonctionnement
 
 - Site **statique** : aucune installation, aucun serveur, aucune dépendance.
-- Test adaptatif : 3 questions par palier, 2 bonnes réponses pour monter,
-  sinon on descend. Plafond de 18 questions, jamais deux fois la même question
-  dans un test. L'ordre des propositions est mélangé à chaque tirage.
+- Test adaptatif, jamais deux fois la même question dans un test. L'ordre des
+  propositions est mélangé à chaque tirage.
+  - **Anglais** : 5 bonnes réponses au niveau courant font monter d'un cran,
+    3 erreurs font descendre. Plafond de 30 questions.
+  - **Autres langues** : 3 questions par palier, 2 bonnes réponses pour monter,
+    sinon on descend. Plafond de 18 questions.
 - **Tirage aléatoire et renouvellement** : les questions sont piochées au hasard
   dans une réserve, et l'application retient celles déjà vues pour ne pas les
   reposer. L'anglais dispose de **48 questions par niveau (288 au total)**, soit
