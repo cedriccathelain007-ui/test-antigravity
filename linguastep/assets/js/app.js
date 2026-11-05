@@ -273,7 +273,9 @@
       { v: "A1", t: "Je débute", s: "Peu ou pas de connaissances" },
       { v: "A2", t: "Quelques bases", s: "Je comprends les phrases simples" },
       { v: "B1", t: "Je me débrouille", s: "Je gère les situations courantes" },
-      { v: "B2", t: "Je suis à l'aise", s: "Je travaille déjà dans cette langue" }
+      { v: "B2", t: "Je suis à l'aise", s: "Je travaille déjà dans cette langue" },
+      { v: "C1", t: "Je maîtrise", s: "Je m'exprime avec aisance et précision" },
+      { v: "C2", t: "Je suis bilingue", s: "Niveau proche de la langue maternelle" }
     ].map(function (c) {
       return '<label class="choice"><input type="radio" name="start" value="' + c.v + '"' +
         (S.start === c.v ? " checked" : "") + '>' +
