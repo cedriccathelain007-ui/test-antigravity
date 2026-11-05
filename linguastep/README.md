@@ -24,16 +24,17 @@ assets/
 - Site **statique** : aucune installation, aucun serveur, aucune dépendance.
 - Test adaptatif, jamais deux fois la même question dans un test. L'ordre des
   propositions est mélangé à chaque tirage.
-  - **Anglais** : séries de 10 questions au même niveau, notées sur 20 (2 points
-    par bonne réponse). 15/20 ou plus : niveau supérieur. Entre 10 et 15 : le
+  - **Anglais** : séries de 20 questions au même niveau, notées sur 20 (1 point
+    par bonne réponse). 15/20 ou plus : niveau supérieur. Entre 10 et 14 : le
     niveau est confirmé et le test s'arrête. Moins de 10 : niveau inférieur.
-    Plafond de 60 questions.
+    Plafond de 120 questions. La plupart des parcours s'arrêtent après une ou
+    deux séries, quand la note tombe dans la zone 10–14.
   - **Autres langues** : 3 questions par palier, 2 bonnes réponses pour monter,
     sinon on descend. Plafond de 18 questions.
 - **Tirage aléatoire et renouvellement** : les questions sont piochées au hasard
   dans une réserve, et l'application retient celles déjà vues pour ne pas les
   reposer. L'anglais dispose de **48 questions par niveau (288 au total)**, soit
-  plusieurs tests complets d'affilée avant de revoir une question. Les cinq
+  deux séries complètes par niveau avant de revoir une question. Les cinq
   autres langues sont à 6 questions par niveau (36 chacune) ; leur extension est
   prévue.
 - **468 questions** de test au total, avec explication en français pour chaque
