@@ -49,13 +49,22 @@ window.Engine = (function () {
      on pioche d'abord dans les questions neuves, puis on complète avec les
      anciennes si la banque est trop petite. Résultat : à chaque nouveau test,
      l'apprenant voit des questions différentes tant que la réserve le permet. */
-  function drawThree(pool) {
+  /* Taille d'une série anglaise. Chaque test anglais se joue par séries de
+     questions au même niveau, notées sur 20 (2 points par bonne réponse).
+     10 questions gardent le test court ; passer à 20 donnerait exactement
+     1 point par question, au prix d'un test deux fois plus long. */
+  var EN_SERIES = 10;
+  /* Plafond anglais : six séries, quel que soit le nombre d'aller-retours.
+     Six séries suffisent pour aller de A1 à C2 sans perdre le dernier palier. */
+  var EN_CAP = 60;
+
+  function drawN(pool, n) {
     var reading = shuffle(pool.filter(function (i) { return i.skill === "reading"; }));
     var rest = shuffle(pool.filter(function (i) { return i.skill !== "reading"; }));
     var out = [];
     if (reading.length) out.push(reading.shift());
-    while (out.length < 3 && rest.length) out.push(rest.shift());
-    while (out.length < 3 && reading.length) out.push(reading.shift());
+    while (out.length < n && rest.length) out.push(rest.shift());
+    while (out.length < n && reading.length) out.push(reading.shift());
     return out;
   }
 
@@ -72,7 +81,8 @@ window.Engine = (function () {
     return copy;
   }
 
-  function pickItems(code, level, asked, recent) {
+  function pickItems(code, level, asked, recent, count) {
+    var n = count || 3;
     var pool = poolFor(code, level);
     if (!pool.length) return [];
     var seen = {};
@@ -82,18 +92,19 @@ window.Engine = (function () {
     (recent || []).forEach(function (id) { known[id] = true; });
     var fresh = pool.filter(function (i) { return !known[i.id]; });
     var old = pool.filter(function (i) { return known[i.id]; });
-    var out = drawThree(fresh);
-    if (out.length < 3) out = out.concat(drawThree(old).slice(0, 3 - out.length));
+    var out = drawN(fresh, n);
+    if (out.length < n) out = out.concat(drawN(old, n - out.length).slice(0, n - out.length));
     return shuffle(out).map(shuffleOptions);
   }
 
   /* ---------- Test adaptatif ----------
-     Principe commun (toutes les langues sauf anglais) : 3 questions par niveau,
-     2 bonnes réponses ou plus → on monte, sinon on descend.
-     Anglais : 5 bonnes réponses au niveau courant → on monte ;
-     3 réponses fausses au niveau courant → on descend.
-     On s'arrête en haut (C2 validé) ou en bas (A1 échoué).
-     Plafond : 18 questions au total. */
+     Autres langues : 3 questions par niveau, 2 bonnes réponses ou plus → on monte,
+     sinon on descend. Plafond : 18 questions.
+
+     Anglais : séries de 10 questions au même niveau, notées sur 20 (2 points par
+     bonne réponse). 15/20 ou plus → niveau supérieur ; entre 10 et 14/20 → le
+     niveau est confirmé et le test s'arrête ; moins de 10/20 → niveau inférieur.
+     Plafond : 50 questions. */
   function newTest(code, startLevel, recent) {
     var idx = Math.max(0, LEVELS.indexOf(startLevel || "A2"));
     var t = {
@@ -104,13 +115,13 @@ window.Engine = (function () {
       asked: [],
       recent: (recent || []).slice(),
       correctAtLevel: 0,
-      wrongAtLevel: 0,
       passed: [],
       failed: [],
       finished: false,
-      finalLevel: null
+      finalLevel: null,
+      note: null
     };
-    t.queue = pickItems(t.code, LEVELS[idx], [], t.recent);
+    t.queue = pickItems(t.code, LEVELS[idx], [], t.recent, code === "en" ? EN_SERIES : 3);
     return t;
   }
 
@@ -125,41 +136,38 @@ window.Engine = (function () {
     var correct = choice === item.a;
     t.asked.push({ item: item, choice: choice, correct: correct });
     if (correct) t.correctAtLevel++;
-    else t.wrongAtLevel++;
     t.qi++;
 
     var change = null;
     var lastPassed = t.passed.length ? t.passed[t.passed.length - 1] : "A1";
 
     if (t.code === "en") {
-      /* Anglais : 5 justes pour monter, 3 fausses pour descendre.
-         On continue de poser des questions jusqu'à ce qu'un seuil soit atteint. */
-      if (t.correctAtLevel >= 5) {
-        t.passed.push(LEVELS[t.level]);
-        lastPassed = LEVELS[t.level];
-        if (t.level >= LEVELS.length - 1) {
+      /* Série terminée : on calcule la note sur 20 et on tranche.
+         2 points par bonne réponse sur une série de 10. */
+      if (t.qi >= t.queue.length) {
+        var note = Math.round((t.correctAtLevel / t.queue.length) * 20);
+        t.note = note;
+        if (note >= 15) {
+          t.passed.push(LEVELS[t.level]);
+          lastPassed = LEVELS[t.level];
+          if (t.level >= LEVELS.length - 1) {
+            t.finished = true;
+            t.finalLevel = "C2";
+          } else {
+            change = "up";
+          }
+        } else if (note >= 10) {
+          /* Niveau confirmé : on reste à ce palier et le test s'arrête là. */
           t.finished = true;
-          t.finalLevel = "C2";
+          t.finalLevel = LEVELS[t.level];
         } else {
-          change = "up";
-        }
-      } else if (t.wrongAtLevel >= 3) {
-        t.failed.push(LEVELS[t.level]);
-        if (t.level <= 0) {
-          t.finished = true;
-          t.finalLevel = lastPassed;
-        } else {
-          change = "down";
-        }
-      }
-      // Queue épuisée mais aucun seuil atteint : on recharge au même niveau,
-      // les compteurs justes/fausses sont conservés.
-      if (!change && !t.finished && t.qi >= t.queue.length) {
-        t.queue = pickItems(t.code, LEVELS[t.level], t.asked, t.recent);
-        t.qi = 0;
-        if (t.queue.length < 1) {
-          t.finished = true;
-          t.finalLevel = lastPassed;
+          t.failed.push(LEVELS[t.level]);
+          if (t.level <= 0) {
+            t.finished = true;
+            t.finalLevel = lastPassed;
+          } else {
+            change = "down";
+          }
         }
       }
     } else {
@@ -188,20 +196,17 @@ window.Engine = (function () {
 
     if (!t.finished && change) {
       t.level += change === "up" ? 1 : -1;
-      t.queue = pickItems(t.code, LEVELS[t.level], t.asked, t.recent);
+      t.queue = pickItems(t.code, LEVELS[t.level], t.asked, t.recent, t.code === "en" ? EN_SERIES : 3);
       t.qi = 0;
       t.correctAtLevel = 0;
-      t.wrongAtLevel = 0;
       if (t.queue.length < 2) {
         t.finished = true;
         t.finalLevel = lastPassed;
       }
     }
 
-    // Plafond : 18 questions pour les autres langues. En anglais, il faut
-    // 5 bonnes réponses par niveau : 30 questions laissent le temps d'aller
-    // de A1 à C2 (25 réponses justes) puis de valider le dernier palier.
-    var cap = t.code === "en" ? 30 : 18;
+    // Plafond : 18 questions pour les autres langues, 50 en anglais (5 séries).
+    var cap = t.code === "en" ? EN_CAP : 18;
     if (!t.finished && t.asked.length >= cap) {
       t.finished = true;
       t.finalLevel = lastPassed;
@@ -238,6 +243,7 @@ window.Engine = (function () {
       }),
       total: t.asked.length,
       correct: correct,
+      note: t.note == null ? null : t.note,
       date: new Date().toISOString(),
       reliability: "estimation indicative (± 1 niveau)"
     };
