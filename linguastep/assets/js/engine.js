@@ -50,13 +50,17 @@ window.Engine = (function () {
      anciennes si la banque est trop petite. Résultat : à chaque nouveau test,
      l'apprenant voit des questions différentes tant que la réserve le permet. */
   /* Taille d'une série anglaise. Chaque test anglais se joue par séries de
-     questions au même niveau, notées sur 20 (2 points par bonne réponse).
-     10 questions gardent le test court ; passer à 20 donnerait exactement
-     1 point par question, au prix d'un test deux fois plus long. */
-  var EN_SERIES = 10;
+     questions au même niveau, notées sur 20. Vingt questions donnent
+     exactement 1 point par bonne réponse : 15/20 = 15 bonnes réponses (75 %)
+     et 10/20 = 10 bonnes réponses (50 %), sans arrondi. Un échantillon plus
+     large rend la note plus stable ; une série plus courte la rendrait plus
+     nerveuse (une erreur valait 2 points avec 10 questions). */
+  var EN_SERIES = 20;
   /* Plafond anglais : six séries, quel que soit le nombre d'aller-retours.
-     Six séries suffisent pour aller de A1 à C2 sans perdre le dernier palier. */
-  var EN_CAP = 60;
+     Six séries de 20 questions couvrent A1 → C2 (120 questions) sans perdre
+     le dernier palier. En pratique, une série dans la zone 10–14/20 arrête
+     le test : la plupart des parcours tiennent en une ou deux séries. */
+  var EN_CAP = 120;
 
   function drawN(pool, n) {
     var reading = shuffle(pool.filter(function (i) { return i.skill === "reading"; }));
@@ -101,10 +105,10 @@ window.Engine = (function () {
      Autres langues : 3 questions par niveau, 2 bonnes réponses ou plus → on monte,
      sinon on descend. Plafond : 18 questions.
 
-     Anglais : séries de 10 questions au même niveau, notées sur 20 (2 points par
+     Anglais : séries de 20 questions au même niveau, notées sur 20 (1 point par
      bonne réponse). 15/20 ou plus → niveau supérieur ; entre 10 et 14/20 → le
      niveau est confirmé et le test s'arrête ; moins de 10/20 → niveau inférieur.
-     Plafond : 50 questions. */
+     Plafond : 120 questions. */
   function newTest(code, startLevel, recent) {
     var idx = Math.max(0, LEVELS.indexOf(startLevel || "A2"));
     var t = {
@@ -143,7 +147,7 @@ window.Engine = (function () {
 
     if (t.code === "en") {
       /* Série terminée : on calcule la note sur 20 et on tranche.
-         2 points par bonne réponse sur une série de 10. */
+         Une série de 20 questions vaut 1 point par bonne réponse. */
       if (t.qi >= t.queue.length) {
         var note = Math.round((t.correctAtLevel / t.queue.length) * 20);
         t.note = note;
@@ -205,7 +209,7 @@ window.Engine = (function () {
       }
     }
 
-    // Plafond : 18 questions pour les autres langues, 50 en anglais (5 séries).
+    // Plafond : 18 questions pour les autres langues, 120 en anglais (6 séries).
     var cap = t.code === "en" ? EN_CAP : 18;
     if (!t.finished && t.asked.length >= cap) {
       t.finished = true;
