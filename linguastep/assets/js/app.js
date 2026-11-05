@@ -276,10 +276,10 @@
     var isEn = S.lang === "en";
     return '<div class="card pad-lg">' +
         '<div class="row-between"><h2 style="margin:0">Évaluation adaptative</h2>' +
-        '<span class="pill">' + (isEn ? "≈ 7 min · 10 à 60 questions" : "≈ 6 min · 9 à 18 questions en général") + '</span></div>' +
+        '<span class="pill">' + (isEn ? "≈ 8 min par série · 20 à 120 questions" : "≈ 6 min · 9 à 18 questions en général") + '</span></div>' +
         '<p class="lead" style="margin-top:10px">Répondez sans dictionnaire. ' +
         (isEn
-          ? "Le test procède par séries de dix questions au même niveau, notées sur 20 : 15/20 ou plus et vous montez d’un cran, entre 10 et 15 vous restez à ce niveau, moins de 10 vous descendez. Le corrigé complet s’affiche à la fin."
+          ? "Le test procède par séries de vingt questions au même niveau, notées sur 20 (un point par bonne réponse) : 15/20 ou plus et vous montez d’un cran, entre 10 et 14 vous restez à ce niveau, moins de 10 vous descendez. Le corrigé complet s’affiche à la fin."
           : "Le test ajuste la difficulté après trois questions : deux bonnes réponses ou plus et il monte d’un niveau, sinon il descend. Le corrigé complet s’affiche à la fin.") +
         '</p>' +
         '<fieldset style="margin-top:18px"><legend>Où en êtes-vous aujourd\'hui ?</legend>' +
@@ -293,7 +293,7 @@
         '<h3>Un test qui s\'adapte, pas un questionnaire figé</h3>' +
         '<div class="steps">' +
           '<div class="step"><span class="n">A1</span><div><span class="t">On démarre à votre niveau</span><span class="d">Vous indiquez votre point de départ, le test affine ensuite.</span></div></div>' +
-          '<div class="step"><span class="n">' + (isEn ? "10" : "3") + '</span><div><span class="t">' + (isEn ? "Dix questions, une note sur 20" : "Trois questions par palier") + '</span><span class="d">' + (isEn ? "15/20 ou plus : niveau supérieur. Entre 10 et 15 : vous restez. Moins de 10 : niveau inférieur." : "Le score du palier décide de la suite : montée ou descente.") + '</span></div></div>' +
+          '<div class="step"><span class="n">' + (isEn ? "20" : "3") + '</span><div><span class="t">' + (isEn ? "Vingt questions, une note sur 20" : "Trois questions par palier") + '</span><span class="d">' + (isEn ? "15/20 ou plus : niveau supérieur. Entre 10 et 14 : vous restez. Moins de 10 : niveau inférieur." : "Le score du palier décide de la suite : montée ou descente.") + '</span></div></div>' +
           '<div class="step"><span class="n">✓</span><div><span class="t">Vous voyez vos erreurs</span><span class="d">Chaque question est corrigée et expliquée à la fin du test.</span></div></div>' +
           '<div class="step"><span class="n">↻</span><div><span class="t">Des questions renouvelées</span><span class="d">Elles sont tirées au hasard dans une réserve : d\'un test à l\'autre, vous ne revoyez pas les mêmes tant qu\'il en reste.</span></div></div>' +
         '</div>' +
