@@ -30,6 +30,13 @@
     });
   }
   function meta(code) { return LANG_BY[code] || { code: code, name: code, native: "", flag: "🌐", note: "" }; }
+  /* Note sur 20 : une décimale, virgule française, sans « ,0 » inutile. */
+  function fmtNote(n) {
+    if (n == null) return "";
+    var v = Math.round(n * 10) / 10;
+    var txt = v === Math.round(v) ? String(Math.round(v)) : v.toFixed(1).replace(".", ",");
+    return txt + "/20";
+  }
   function courseOf(code) { return (window.COURSES || {})[code]; }
   function db() { return Store.read(); }
   function st(code) { return Store.langState(code || S.lang); }
@@ -254,7 +261,7 @@
         '<hr class="divider">' +
         '<h3>Profil par compétence</h3>' + barsHTML(a.skills) +
         '<p class="tiny muted" style="margin-top:10px">' + a.reliability + '. ' + a.correct + '/' + a.total + ' ' + (a.correct > 1 ? "réponses justes" : "réponse juste") + '.' +
-          (a.note == null ? '' : ' Note de la dernière série : ' + a.note + '/20.') + '</p>' +
+          (a.note == null ? '' : ' Note : ' + fmtNote(a.note) + '.') + '</p>' +
       '</div>' +
       '<div class="card soft" style="margin-top:16px"><h3>Prochaine étape</h3>' +
         '<p>Votre parcours commence au niveau <strong>' + a.level + '</strong>. Les leçons courtes ciblent en priorité votre point faible : ' +
@@ -276,10 +283,10 @@
     var isEn = S.lang === "en";
     return '<div class="card pad-lg">' +
         '<div class="row-between"><h2 style="margin:0">Évaluation adaptative</h2>' +
-        '<span class="pill">' + (isEn ? "≈ 8 min par série · 20 à 120 questions" : "≈ 6 min · 9 à 18 questions en général") + '</span></div>' +
+        '<span class="pill">' + (isEn ? "≈ 15 min · 48 questions" : "≈ 6 min · 9 à 18 questions en général") + '</span></div>' +
         '<p class="lead" style="margin-top:10px">Répondez sans dictionnaire. ' +
         (isEn
-          ? "Le test procède par séries de vingt questions au même niveau, notées sur 20 (un point par bonne réponse) : 15/20 ou plus et vous montez d’un cran, entre 10 et 14 vous restez à ce niveau, moins de 10 vous descendez. Le corrigé complet s’affiche à la fin."
+          ? "Le test pose 48 questions au niveau que vous avez choisi, notées sur 20 (deux cinquièmes de point par bonne réponse) : 15/20 ou plus et le niveau retenu est le niveau supérieur, entre 10 et 14 il est confirmé, moins de 10 il est abaissé. Le test s'arrête après cette série : on ne traverse pas plusieurs niveaux en une séance. Le corrigé complet s'affiche à la fin."
           : "Le test ajuste la difficulté après trois questions : deux bonnes réponses ou plus et il monte d’un niveau, sinon il descend. Le corrigé complet s’affiche à la fin.") +
         '</p>' +
         '<fieldset style="margin-top:18px"><legend>Où en êtes-vous aujourd\'hui ?</legend>' +
@@ -293,9 +300,9 @@
         '<h3>Un test qui s\'adapte, pas un questionnaire figé</h3>' +
         '<div class="steps">' +
           '<div class="step"><span class="n">A1</span><div><span class="t">On démarre à votre niveau</span><span class="d">Vous indiquez votre point de départ, le test affine ensuite.</span></div></div>' +
-          '<div class="step"><span class="n">' + (isEn ? "20" : "3") + '</span><div><span class="t">' + (isEn ? "Vingt questions, une note sur 20" : "Trois questions par palier") + '</span><span class="d">' + (isEn ? "15/20 ou plus : niveau supérieur. Entre 10 et 14 : vous restez. Moins de 10 : niveau inférieur." : "Le score du palier décide de la suite : montée ou descente.") + '</span></div></div>' +
+          '<div class="step"><span class="n">' + (isEn ? "48" : "3") + '</span><div><span class="t">' + (isEn ? "Quarante-huit questions, une note sur 20" : "Trois questions par palier") + '</span><span class="d">' + (isEn ? "36 bonnes réponses ou plus : niveau supérieur. 24 à 35 : niveau confirmé. Moins de 24 : niveau inférieur." : "Le score du palier décide de la suite : montée ou descente.") + '</span></div></div>' +
           '<div class="step"><span class="n">✓</span><div><span class="t">Vous voyez vos erreurs</span><span class="d">Chaque question est corrigée et expliquée à la fin du test.</span></div></div>' +
-          '<div class="step"><span class="n">↻</span><div><span class="t">Des questions renouvelées</span><span class="d">Elles sont tirées au hasard dans une réserve : d\'un test à l\'autre, vous ne revoyez pas les mêmes tant qu\'il en reste.</span></div></div>' +
+          '<div class="step"><span class="n">↻</span><div><span class="t">' + (isEn ? "Un ordre aléatoire" : "Des questions renouvelées") + '</span><span class="d">' + (isEn ? "Les 48 questions du niveau sont tirées dans un ordre aléatoire et les propositions sont mélangées à chaque test." : "Elles sont tirées au hasard dans une réserve : d\'un test à l\'autre, vous ne revoyez pas les mêmes tant qu\'il en reste.") + '</span></div></div>' +
         '</div>' +
       '</div>';
   }
@@ -407,7 +414,7 @@
     }
     var answered = t.asked.length;
     var questionNo = ui.checked ? answered : answered + 1;
-    var total = S.lang === "en" ? 20 : 15;
+    var total = S.lang === "en" ? 48 : 15;
     var pct = Math.min(96, Math.round((answered / total) * 100));
 
     var opts = item.options.map(function (o, i) {
@@ -514,7 +521,7 @@
           '<p class="eyebrow" style="margin-bottom:6px">Résultat de l\'évaluation</p>' +
           '<h1 style="margin-bottom:4px">' + lm.label + ' — ' + lm.short + '</h1>' +
           '<p class="lead">' + lm.desc + ' ' + res.correct + (res.correct > 1 ? ' réponses justes' : ' réponse juste') + ' sur ' + res.total + '.</p>' +
-          (res.note == null ? '' : '<p class="lead" style="margin-top:6px">Dernière série : <strong>' + res.note + '/20</strong> — ' + (res.note >= 15 ? "niveau supérieur validé." : res.note >= 10 ? "niveau confirmé." : "niveau inférieur.") + '</p>') +
+          (res.note == null ? '' : '<p class="lead" style="margin-top:6px">Note : <strong>' + fmtNote(res.note) + '</strong> — ' + (res.level === res.start ? "niveau confirmé." : res.note >= 15 ? "niveau supérieur." : "niveau inférieur.") + '</p>') +
           '<p class="tiny muted">' + res.reliability + '. Test non certifiant.</p>' +
         '</div>' +
       '</div>' +
