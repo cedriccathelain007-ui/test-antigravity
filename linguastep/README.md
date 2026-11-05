@@ -24,19 +24,20 @@ assets/
 - Site **statique** : aucune installation, aucun serveur, aucune dépendance.
 - Test adaptatif, jamais deux fois la même question dans un test. L'ordre des
   propositions est mélangé à chaque tirage.
-  - **Anglais** : séries de 20 questions au même niveau, notées sur 20 (1 point
-    par bonne réponse). 15/20 ou plus : niveau supérieur. Entre 10 et 14 : le
-    niveau est confirmé et le test s'arrête. Moins de 10 : niveau inférieur.
-    Plafond de 120 questions. La plupart des parcours s'arrêtent après une ou
-    deux séries, quand la note tombe dans la zone 10–14.
+  - **Anglais** : une série unique de 48 questions au niveau déclaré, notées sur
+    20 (0,42 point par bonne réponse, note à une décimale). 36 bonnes réponses
+    ou plus (15/20) : le niveau retenu est le niveau supérieur. 24 à 35 (10 à
+    14/20) : niveau confirmé. Moins de 24 (moins de 10/20) : niveau inférieur.
+    Le test s'arrête après cette série : on ne traverse pas plusieurs niveaux en
+    une séance. Durée : environ 15 minutes.
   - **Autres langues** : 3 questions par palier, 2 bonnes réponses pour monter,
     sinon on descend. Plafond de 18 questions.
-- **Tirage aléatoire et renouvellement** : les questions sont piochées au hasard
-  dans une réserve, et l'application retient celles déjà vues pour ne pas les
-  reposer. L'anglais dispose de **48 questions par niveau (288 au total)**, soit
-  deux séries complètes par niveau avant de revoir une question. Les cinq
-  autres langues sont à 6 questions par niveau (36 chacune) ; leur extension est
-  prévue.
+- **Tirage aléatoire** : les questions sont piochées au hasard et l'ordre des
+  propositions change à chaque test. L'anglais compte **48 questions par niveau
+  (288 au total)** : un test consomme la réserve entière du niveau, si bien
+  qu'un second test au même niveau repose les mêmes questions, dans un ordre
+  différent. Les cinq autres langues sont à 6 questions par niveau (36 chacune)
+  et gardent le renouvellement ; leur extension est prévue.
 - **468 questions** de test au total, avec explication en français pour chaque
   réponse.
 - 43 leçons et 185 exercices corrigés (QCM, complétion, remise en ordre).
@@ -54,3 +55,5 @@ version en ligne.
 - Niveau **indicatif** (± 1 niveau), test non certifiant.
 - **Écrit seulement** : pas d'oral dans cette version.
 - Contenu de démonstration, non relu par des locuteurs natifs.
+- **Réserve anglaise** : 48 questions par niveau, soit exactement un test.
+  L'agrandir est la prochaine amélioration prévue.
