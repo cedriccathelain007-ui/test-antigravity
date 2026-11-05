@@ -88,9 +88,12 @@ window.Engine = (function () {
   }
 
   /* ---------- Test adaptatif ----------
-     Principe : 3 questions par niveau. 2 bonnes réponses ou plus → on monte.
-     0 ou 1 → on descend. On s'arrête en haut (C2 validé) ou en bas (A1 échoué).
-     9 à 18 questions en général ; moins si la banque d'un niveau est épuisée. */
+     Principe commun (toutes les langues sauf anglais) : 3 questions par niveau,
+     2 bonnes réponses ou plus → on monte, sinon on descend.
+     Anglais : 5 bonnes réponses au niveau courant → on monte ;
+     3 réponses fausses au niveau courant → on descend.
+     On s'arrête en haut (C2 validé) ou en bas (A1 échoué).
+     Plafond : 18 questions au total. */
   function newTest(code, startLevel, recent) {
     var idx = Math.max(0, LEVELS.indexOf(startLevel || "A2"));
     var t = {
@@ -101,6 +104,7 @@ window.Engine = (function () {
       asked: [],
       recent: (recent || []).slice(),
       correctAtLevel: 0,
+      wrongAtLevel: 0,
       passed: [],
       failed: [],
       finished: false,
@@ -121,12 +125,16 @@ window.Engine = (function () {
     var correct = choice === item.a;
     t.asked.push({ item: item, choice: choice, correct: correct });
     if (correct) t.correctAtLevel++;
+    else t.wrongAtLevel++;
     t.qi++;
 
     var change = null;
     var lastPassed = t.passed.length ? t.passed[t.passed.length - 1] : "A1";
-    if (t.qi >= t.queue.length) {
-      if (t.correctAtLevel >= 2) {
+
+    if (t.code === "en") {
+      /* Anglais : 5 justes pour monter, 3 fausses pour descendre.
+         On continue de poser des questions jusqu'à ce qu'un seuil soit atteint. */
+      if (t.correctAtLevel >= 5) {
         t.passed.push(LEVELS[t.level]);
         lastPassed = LEVELS[t.level];
         if (t.level >= LEVELS.length - 1) {
@@ -135,7 +143,7 @@ window.Engine = (function () {
         } else {
           change = "up";
         }
-      } else {
+      } else if (t.wrongAtLevel >= 3) {
         t.failed.push(LEVELS[t.level]);
         if (t.level <= 0) {
           t.finished = true;
@@ -144,21 +152,57 @@ window.Engine = (function () {
           change = "down";
         }
       }
-      if (!t.finished && change) {
-        t.level += change === "up" ? 1 : -1;
+      // Queue épuisée mais aucun seuil atteint : on recharge au même niveau,
+      // les compteurs justes/fausses sont conservés.
+      if (!change && !t.finished && t.qi >= t.queue.length) {
         t.queue = pickItems(t.code, LEVELS[t.level], t.asked, t.recent);
         t.qi = 0;
-        t.correctAtLevel = 0;
-        // Banque épuisée pour ce niveau : on préfère arrêter plutôt que de
-        // reposer les mêmes questions ou de juger un palier sur un seul item.
-        if (t.queue.length < 2) {
+        if (t.queue.length < 1) {
           t.finished = true;
           t.finalLevel = lastPassed;
         }
       }
+    } else {
+      /* Autres langues : palier de 3 questions, 2 bonnes réponses ou plus pour monter. */
+      if (t.qi >= t.queue.length) {
+        if (t.correctAtLevel >= 2) {
+          t.passed.push(LEVELS[t.level]);
+          lastPassed = LEVELS[t.level];
+          if (t.level >= LEVELS.length - 1) {
+            t.finished = true;
+            t.finalLevel = "C2";
+          } else {
+            change = "up";
+          }
+        } else {
+          t.failed.push(LEVELS[t.level]);
+          if (t.level <= 0) {
+            t.finished = true;
+            t.finalLevel = lastPassed;
+          } else {
+            change = "down";
+          }
+        }
+      }
     }
-    // Plafond : 18 questions, quel que soit le nombre d'aller-retours.
-    if (!t.finished && t.asked.length >= 18) {
+
+    if (!t.finished && change) {
+      t.level += change === "up" ? 1 : -1;
+      t.queue = pickItems(t.code, LEVELS[t.level], t.asked, t.recent);
+      t.qi = 0;
+      t.correctAtLevel = 0;
+      t.wrongAtLevel = 0;
+      if (t.queue.length < 2) {
+        t.finished = true;
+        t.finalLevel = lastPassed;
+      }
+    }
+
+    // Plafond : 18 questions pour les autres langues. En anglais, il faut
+    // 5 bonnes réponses par niveau : 30 questions laissent le temps d'aller
+    // de A1 à C2 (25 réponses justes) puis de valider le dernier palier.
+    var cap = t.code === "en" ? 30 : 18;
+    if (!t.finished && t.asked.length >= cap) {
       t.finished = true;
       t.finalLevel = lastPassed;
     }
