@@ -66,9 +66,9 @@ window.Store = (function () {
 
   /* Mémoire des questions déjà vues, par langue : sert au renouvellement
      des tests. On garde les plus récentes. Le plafond dépasse la taille de
-     la plus grosse banque (432 questions en anglais) : ainsi une question ne
+     la plus grosse banque (576 questions en anglais) : ainsi une question ne
      revient pas tant qu'il reste des questions neuves dans le niveau. */
-  var RECENT_CAP = 500;
+  var RECENT_CAP = 700;
 
   function getRecent(code) {
     return (langState(code).recent || []).slice();
