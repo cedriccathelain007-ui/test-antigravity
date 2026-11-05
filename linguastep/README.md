@@ -33,12 +33,13 @@ assets/
   - **Autres langues** : 3 questions par palier, 2 bonnes réponses pour monter,
     sinon on descend. Plafond de 18 questions.
 - **Tirage aléatoire et renouvellement** : les questions sont piochées au hasard
-  et l'ordre des propositions change à chaque test. L'anglais compte **72
-  questions par niveau (432 au total)** : un test en utilise 48, le suivant
-  propose les 24 restantes puis complète avec des questions déjà vues. Les cinq
-  autres langues sont à 6 questions par niveau (36 chacune) et gardent le
-  renouvellement ; leur extension est prévue.
-- **612 questions** de test au total, avec explication en français pour chaque
+  et l'ordre des propositions change à chaque test. L'anglais compte **96
+  questions par niveau (576 au total)** : un test en utilise 48, le suivant
+  propose les 48 restantes, entièrement neuves ; à partir du troisième test, la
+  sélection reprend les plus anciennes. Les cinq autres langues sont à 6
+  questions par niveau (36 chacune) et gardent le renouvellement ; leur extension
+  est prévue.
+- **756 questions** de test au total, avec explication en français pour chaque
   réponse.
 - 43 leçons et 185 exercices corrigés (QCM, complétion, remise en ordre).
 - Progression enregistrée dans le navigateur (`localStorage`), avec export et
@@ -55,5 +56,6 @@ version en ligne.
 - Niveau **indicatif** (± 1 niveau), test non certifiant.
 - **Écrit seulement** : pas d'oral dans cette version.
 - Contenu de démonstration, non relu par des locuteurs natifs.
-- **Réserve anglaise** : 72 questions par niveau, dont 48 servent à un test.
-  Deux tests entièrement neufs d'affilée demanderaient 96 questions par niveau.
+- **Réserve anglaise** : 96 questions par niveau, dont 48 servent à un test.
+  Deux tests entièrement neufs sont donc possibles d'affilée ; le troisième
+  reprend des questions déjà vues.
