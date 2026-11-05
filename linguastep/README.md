@@ -32,13 +32,13 @@ assets/
     une séance. Durée : environ 15 minutes.
   - **Autres langues** : 3 questions par palier, 2 bonnes réponses pour monter,
     sinon on descend. Plafond de 18 questions.
-- **Tirage aléatoire** : les questions sont piochées au hasard et l'ordre des
-  propositions change à chaque test. L'anglais compte **48 questions par niveau
-  (288 au total)** : un test consomme la réserve entière du niveau, si bien
-  qu'un second test au même niveau repose les mêmes questions, dans un ordre
-  différent. Les cinq autres langues sont à 6 questions par niveau (36 chacune)
-  et gardent le renouvellement ; leur extension est prévue.
-- **468 questions** de test au total, avec explication en français pour chaque
+- **Tirage aléatoire et renouvellement** : les questions sont piochées au hasard
+  et l'ordre des propositions change à chaque test. L'anglais compte **72
+  questions par niveau (432 au total)** : un test en utilise 48, le suivant
+  propose les 24 restantes puis complète avec des questions déjà vues. Les cinq
+  autres langues sont à 6 questions par niveau (36 chacune) et gardent le
+  renouvellement ; leur extension est prévue.
+- **612 questions** de test au total, avec explication en français pour chaque
   réponse.
 - 43 leçons et 185 exercices corrigés (QCM, complétion, remise en ordre).
 - Progression enregistrée dans le navigateur (`localStorage`), avec export et
@@ -55,5 +55,5 @@ version en ligne.
 - Niveau **indicatif** (± 1 niveau), test non certifiant.
 - **Écrit seulement** : pas d'oral dans cette version.
 - Contenu de démonstration, non relu par des locuteurs natifs.
-- **Réserve anglaise** : 48 questions par niveau, soit exactement un test.
-  L'agrandir est la prochaine amélioration prévue.
+- **Réserve anglaise** : 72 questions par niveau, dont 48 servent à un test.
+  Deux tests entièrement neufs d'affilée demanderaient 96 questions par niveau.
