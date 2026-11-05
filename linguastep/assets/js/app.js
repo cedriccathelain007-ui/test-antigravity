@@ -180,7 +180,7 @@
           '</div>' +
         '</div>' +
         '<div class="hero-art" aria-hidden="true">' +
-          '<div class="float-card"><span class="lv lv-B1">B1</span><div><div class="k">Niveau estimé</div><div class="v">en 6 minutes</div></div></div>' +
+          '<div class="float-card"><span class="lv lv-B1">B1</span><div><div class="k">Niveau estimé</div><div class="v">en quelques minutes</div></div></div>' +
           '<div class="float-card"><span class="lv lv-B2">B2</span><div><div class="k">Objectif atteint</div><div class="v">grâce au parcours</div></div></div>' +
           '<div class="float-card"><span aria-hidden="true">✓</span><div><div class="k">Corrections expliquées</div><div class="v">à chaque exercice</div></div></div>' +
         '</div>' +
@@ -199,7 +199,7 @@
       '<h2>Comment ça marche</h2>' +
       '<div class="steps">' +
         '<div class="step"><span class="n">1</span><div><span class="t">Un test adaptatif</span>' +
-          '<span class="d">Trois questions par niveau : deux bonnes réponses et vous montez, sinon vous descendez. Le test s\'arrête quand votre niveau est cerné.</span></div></div>' +
+          '<span class="d">Les questions s\'enchaînent et la difficulté suit vos réponses : le test s\'arrête quand votre niveau est cerné.</span></div></div>' +
         '<div class="step"><span class="n">2</span><div><span class="t">Un parcours à votre niveau</span>' +
           '<span class="d">Des leçons courtes, une règle à la fois, avec des exercices tirés de situations professionnelles.</span></div></div>' +
         '<div class="step"><span class="n">3</span><div><span class="t">Des corrections utiles</span>' +
@@ -272,11 +272,15 @@
         '<span class="choice-body"><span class="ct">' + c.t + ' · ' + c.v + '</span><span class="cs">' + c.s + '</span></span></label>';
     }).join("");
 
+    var isEn = S.lang === "en";
     return '<div class="card pad-lg">' +
         '<div class="row-between"><h2 style="margin:0">Évaluation adaptative</h2>' +
-        '<span class="pill">≈ 6 min · 9 à 18 questions en général</span></div>' +
-        '<p class="lead" style="margin-top:10px">Répondez sans dictionnaire. Le test ajuste la difficulté après trois questions : ' +
-        'deux bonnes réponses ou plus et il monte d\'un niveau, sinon il descend. Le corrigé complet s\'affiche à la fin.</p>' +
+        '<span class="pill">' + (isEn ? "≈ 8 min · 3 à 30 questions" : "≈ 6 min · 9 à 18 questions en général") + '</span></div>' +
+        '<p class="lead" style="margin-top:10px">Répondez sans dictionnaire. ' +
+        (isEn
+          ? "Le test ajuste la difficulté au fil des réponses : 5 bonnes réponses au même niveau font monter d’un cran, 3 erreurs font descendre. Le corrigé complet s’affiche à la fin."
+          : "Le test ajuste la difficulté après trois questions : deux bonnes réponses ou plus et il monte d’un niveau, sinon il descend. Le corrigé complet s’affiche à la fin.") +
+        '</p>' +
         '<fieldset style="margin-top:18px"><legend>Où en êtes-vous aujourd\'hui ?</legend>' +
         '<div class="choices">' + choices + '</div></fieldset>' +
         '<div class="btn-row" style="margin-top:20px">' +
@@ -288,7 +292,7 @@
         '<h3>Un test qui s\'adapte, pas un questionnaire figé</h3>' +
         '<div class="steps">' +
           '<div class="step"><span class="n">A1</span><div><span class="t">On démarre à votre niveau</span><span class="d">Vous indiquez votre point de départ, le test affine ensuite.</span></div></div>' +
-          '<div class="step"><span class="n">3</span><div><span class="t">Trois questions par palier</span><span class="d">Le score du palier décide de la suite : montée ou descente.</span></div></div>' +
+          '<div class="step"><span class="n">' + (isEn ? "5" : "3") + '</span><div><span class="t">' + (isEn ? "Cinq justes pour monter" : "Trois questions par palier") + '</span><span class="d">' + (isEn ? "5 bonnes réponses au même niveau font monter d’un cran ; 3 erreurs font descendre." : "Le score du palier décide de la suite : montée ou descente.") + '</span></div></div>' +
           '<div class="step"><span class="n">✓</span><div><span class="t">Vous voyez vos erreurs</span><span class="d">Chaque question est corrigée et expliquée à la fin du test.</span></div></div>' +
           '<div class="step"><span class="n">↻</span><div><span class="t">Des questions renouvelées</span><span class="d">Elles sont tirées au hasard dans une réserve : d\'un test à l\'autre, vous ne revoyez pas les mêmes tant qu\'il en reste.</span></div></div>' +
         '</div>' +
@@ -402,7 +406,8 @@
     }
     var answered = t.asked.length;
     var questionNo = ui.checked ? answered : answered + 1;
-    var pct = Math.min(96, Math.round((answered / 15) * 100));
+    var total = S.lang === "en" ? 25 : 15;
+    var pct = Math.min(96, Math.round((answered / total) * 100));
 
     var opts = item.options.map(function (o, i) {
       var state = "";
