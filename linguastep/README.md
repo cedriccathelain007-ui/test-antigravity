@@ -41,7 +41,7 @@ assets/
   est prévue.
 - **756 questions** de test au total, avec explication en français pour chaque
   réponse.
-- 43 leçons et 185 exercices corrigés (QCM, complétion, remise en ordre).
+- 55 leçons et 245 exercices corrigés (QCM, complétion, remise en ordre).
 - Progression enregistrée dans le navigateur (`localStorage`), avec export et
   import JSON. **Aucun compte, aucune donnée envoyée.**
 
