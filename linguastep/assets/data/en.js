@@ -4250,6 +4250,98 @@ window.COURSES.en = {
             }
           ]
         }
+,        {
+          id: "en-a1-l3",
+          title: "Like, love, hate + -ing",
+          goal: "Exprimer des préférences au travail.",
+          rule: "After <strong>like, love, hate, prefer</strong>, use the verb in <strong>-ing</strong>. Example: I like working in a team.",
+          examples: [
+            { t: "She loves meeting new clients.", fr: "Elle adore rencontrer de nouveaux clients." },
+            { t: "I don't like working late on Fridays.", fr: "Je n'aime pas travailler tard le vendredi." },
+            { t: "They hate waiting for deliveries.", fr: "Ils détestent attendre les livraisons." },
+          ],
+          exercises: [
+            {
+              type: "qcm",
+              q: "She ___ working in a team.",
+              options: ["loves", "love", "loving", "to love"],
+              a: 0,
+              why: "She → 3e personne du singulier : loves."
+            },
+            {
+              type: "fill",
+              q: "I ___ (to start) my day with a coffee.",
+              a: ["start"],
+              why: "Présent simple, 1e personne du singulier : start."
+            },
+            {
+              type: "qcm",
+              q: "Do you ___ speaking English on the phone?",
+              options: ["like", "likes", "liking", "to like"],
+              a: 0,
+              why: "Do you + base verbale : like."
+            },
+            {
+              type: "order",
+              q: "Remettez les mots dans l'ordre.",
+              a: "He doesn't like working late",
+              tokens: ["He", "doesn't", "like", "working", "late"],
+              why: "Négation : does not + base verbale, sans -s."
+            },
+            {
+              type: "fill",
+              q: "We ___ (to have) a break at 11 a.m.",
+              a: ["have"],
+              why: "Présent simple, 1e personne du pluriel : have."
+            },
+          ]
+        },
+        {
+          id: "en-a1-l4",
+          title: "Can / Can't + object pronouns",
+          goal: "Parler de capacités et de permissions au bureau.",
+          rule: "<strong>Can</strong> + base verb expresses ability or permission. Object pronouns: me, you, him, her, it, us, them.",
+          examples: [
+            { t: "Can you help me with this file?", fr: "Pouvez-vous m'aider avec ce fichier ?" },
+            { t: "She can't access the shared drive.", fr: "Elle ne peut pas accéder au disque partagé." },
+            { t: "I can meet you at two.", fr: "Je peux vous rencontrer à deux heures." },
+          ],
+          exercises: [
+            {
+              type: "qcm",
+              q: "___ you help me with this file?",
+              options: ["Can", "Do", "Are", "May"],
+              a: 0,
+              why: "Demande de capacité/permission : Can + sujet + verbe."
+            },
+            {
+              type: "fill",
+              q: "Can you send ___ the document?",
+              a: ["it"],
+              why: "Pronom objet : it (le document)."
+            },
+            {
+              type: "qcm",
+              q: "She ___ use the shared drive.",
+              options: ["can't", "don't", "isn't", "doesn't"],
+              a: 0,
+              why: "She → 3e personne : can't + base verbale."
+            },
+            {
+              type: "order",
+              q: "Remettez les mots dans l'ordre.",
+              a: "I can meet you at two",
+              tokens: ["I", "can", "meet", "you", "at", "two"],
+              why: "Sujet + auxiliaire + verbe + complément."
+            },
+            {
+              type: "fill",
+              q: "They ___ speak French very well.",
+              a: ["can"],
+              why: "Capacité générale : can + base verbale."
+            },
+          ]
+        }
       ]
     },
 
@@ -4347,6 +4439,98 @@ window.COURSES.en = {
               a: 1,
               why: "Prévision fondée sur un indice visible → be going to."
             }
+          ]
+        }
+,        {
+          id: "en-a2-l3",
+          title: "Past continuous",
+          goal: "Décrire une action en cours dans le passé.",
+          rule: "Past continuous = <strong>was/were + verbe en -ing</strong>. Used for an action in progress when another action interrupted it.",
+          examples: [
+            { t: "I was working when the client called.", fr: "Je travaillais quand le client a appelé." },
+            { t: "They were waiting for the delivery at 9 a.m.", fr: "Ils attendaient la livraison à 9 heures." },
+            { t: "We were having lunch when the fire alarm rang.", fr: "Nous déjeunions quand l'alarme incendie a sonné." },
+          ],
+          exercises: [
+            {
+              type: "qcm",
+              q: "I ___ when the client called.",
+              options: ["worked", "was working", "work", "am working"],
+              a: 1,
+              why: "Action en cours interrompue : past continuous (was working)."
+            },
+            {
+              type: "fill",
+              q: "They ___ (to wait) for the delivery at 9 a.m.",
+              a: ["were waiting"],
+              why: "They = were + verbe en -ing."
+            },
+            {
+              type: "qcm",
+              q: "What ___ you doing at 6 p.m. yesterday?",
+              options: ["were", "was", "did", "are"],
+              a: 0,
+              why: "What + were + sujet + -ing pour le prétérit continu."
+            },
+            {
+              type: "order",
+              q: "Remettez les mots dans l'ordre.",
+              a: "She was talking to the supplier",
+              tokens: ["She", "was", "talking", "to", "the", "supplier"],
+              why: "Sujet + was + verbe en -ing + complément."
+            },
+            {
+              type: "fill",
+              q: "We ___ (to have) lunch when the fire alarm rang.",
+              a: ["were having"],
+              why: "We = were + verbe en -ing."
+            },
+          ]
+        },
+        {
+          id: "en-a2-l4",
+          title: "Comparatives and superlatives",
+          goal: "Comparer des produits, des services, des performances.",
+          rule: "Short adjectives: <strong>-er / -est</strong>. Long adjectives: <strong>more / most</strong>. Irregular: good → better, bad → worse.",
+          examples: [
+            { t: "This report is better than the last one.", fr: "Ce rapport est meilleur que le dernier." },
+            { t: "It is the most expensive item on the list.", fr: "C'est l'article le plus cher de la liste." },
+            { t: "Our service is more reliable than theirs.", fr: "Notre service est plus fiable que le leur." },
+          ],
+          exercises: [
+            {
+              type: "qcm",
+              q: "This report is ___ than the last one.",
+              options: ["good", "better", "best", "more good"],
+              a: 1,
+              why: "Comparatif de good : better (irrégulier)."
+            },
+            {
+              type: "fill",
+              q: "It is the ___ expensive item on the list.",
+              a: ["most"],
+              why: "Superlatif : the most + adjectif long."
+            },
+            {
+              type: "qcm",
+              q: "Our service is ___ than theirs.",
+              options: ["reliable", "more reliable", "most reliable", "reliabler"],
+              a: 1,
+              why: "Comparatif : more + adjectif long (reliable)."
+            },
+            {
+              type: "order",
+              q: "Remettez les mots dans l'ordre.",
+              a: "This is the cheapest option",
+              tokens: ["This", "is", "the", "cheapest", "option"],
+              why: "Superlatif de cheap : the cheapest."
+            },
+            {
+              type: "fill",
+              q: "Our team is ___ productive than last year.",
+              a: ["more"],
+              why: "Comparatif : more + adjectif long (productive)."
+            },
           ]
         }
       ]
@@ -4495,6 +4679,99 @@ window.COURSES.en = {
             }
           ]
         }
+,        {
+          id: "en-b1-l4",
+          title: "Phrasal verbs at work",
+          goal: "Utiliser des phrasal verbs courants en entreprise.",
+          rule: "Phrasal verbs = verb + particle. Meaning often differs from the base verb. Some are separable: <em>call the meeting off</em> or <em>call off the meeting</em>.",
+          examples: [
+            { t: "We need to put off the meeting until Friday.", fr: "Nous devons reporter la réunion à vendredi." },
+            { t: "Please follow up the client by email.", fr: "Veuillez faire un suivi avec le client par email." },
+            { t: "The team will carry out a full analysis.", fr: "L'équipe mènera une analyse complète." },
+          ],
+          exercises: [
+            {
+              type: "qcm",
+              q: "We need to ___ the meeting until Friday.",
+              options: ["put off", "call off", "follow up", "carry out"],
+              a: 0,
+              why: "Put off = reporter à plus tard. Call off = annuler."
+            },
+            {
+              type: "fill",
+              q: "Please ___ up the invoice by email.",
+              a: ["send"],
+              why: "Send up n'existe pas ici ; dans ce contexte, on envoie (send)."
+            },
+            {
+              type: "qcm",
+              q: "The team will ___ out a full analysis.",
+              options: ["carry", "take", "put", "set"],
+              a: 0,
+              why: "Carry out = réaliser, mener à bien."
+            },
+            {
+              type: "order",
+              q: "Remettez les mots dans l'ordre.",
+              a: "We need to follow up the client",
+              tokens: ["We", "need", "to", "follow", "up", "the", "client"],
+              why: "Follow up someone = faire un suivi avec quelqu'un."
+            },
+            {
+              type: "qcm",
+              q: "Please ___ me up to date after the call.",
+              options: ["bring", "take", "make", "give"],
+              a: 0,
+              why: "Bring someone up to date = mettre quelqu'un au courant."
+            },
+          ]
+        },
+        {
+          id: "en-b1-l5",
+          title: "Making suggestions and advice",
+          goal: "Faire des suggestions et donner des conseils en réunion.",
+          rule: "<strong>How about / What about + -ing</strong> for suggestions. <strong>Let's + base verb</strong>. <strong>Should + base verb</strong> for advice.",
+          examples: [
+            { t: "How about ordering pizza for lunch?", fr: "Et si on commandait des pizzas pour le déjeuner ?" },
+            { t: "Let's schedule a call tomorrow.", fr: "Planifions un appel demain." },
+            { t: "You should speak to the manager about this.", fr: "Tu devrais parler de ça avec le manager." },
+          ],
+          exercises: [
+            {
+              type: "qcm",
+              q: "___ we postpone the meeting?",
+              options: ["Should", "Do", "Are", "Have"],
+              a: 0,
+              why: "Conseil/suggestion : Should + sujet + verbe."
+            },
+            {
+              type: "fill",
+              q: "___ ordering pizza for lunch?",
+              a: ["How about", "What about"],
+              why: "Suggestion : How about / What about + verbe en -ing."
+            },
+            {
+              type: "qcm",
+              q: "___ not send the email today?",
+              options: ["Why", "What", "How", "When"],
+              a: 0,
+              why: "Suggestion négative : Why not + base verbale."
+            },
+            {
+              type: "order",
+              q: "Remettez les mots dans l'ordre.",
+              a: "Let's schedule a call tomorrow",
+              tokens: ["Let's", "schedule", "a", "call", "tomorrow"],
+              why: "Let's + base verbale pour une suggestion."
+            },
+            {
+              type: "fill",
+              q: "You ___ speak to the manager about this.",
+              a: ["should"],
+              why: "Conseil : should + base verbale."
+            },
+          ]
+        }
       ]
     },
 
@@ -4592,6 +4869,99 @@ window.COURSES.en = {
               a: "Although the budget was limited the team delivered",
               why: "Although introduit une proposition avec sujet et verbe."
             }
+          ]
+        }
+,        {
+          id: "en-b2-l3",
+          title: "Passive with reporting verbs",
+          goal: "Report ce que l'on dit de manière formelle.",
+          rule: "<strong>It is said / believed / thought / reported that...</strong> or <strong>Subject + is said to + infinitive</strong>. Common in news and formal reports.",
+          examples: [
+            { t: "It is said that the market will grow.", fr: "On dit que le marché va croître." },
+            { t: "The CEO is believed to support the new strategy.", fr: "On croit que le PDG soutient la nouvelle stratégie." },
+            { t: "She is reported to have left the company.", fr: "On rapporte qu'elle a quitté l'entreprise." },
+          ],
+          exercises: [
+            {
+              type: "qcm",
+              q: "The project ___ delayed by the supplier.",
+              options: ["is said to be", "is said be", "is saying to be", "says to be"],
+              a: 0,
+              why: "Passif avec reporting verb : is said to be + participe passé."
+            },
+            {
+              type: "fill",
+              q: "It ___ believed that the market will grow.",
+              a: ["is"],
+              why: "It is believed that = on croit que."
+            },
+            {
+              type: "qcm",
+              q: "She ___ to have left the company.",
+              options: ["is reported", "reports", "is reporting", "reported"],
+              a: 0,
+              why: "Structure passive de report : is reported to have + PP."
+            },
+            {
+              type: "order",
+              q: "Remettez les mots dans l'ordre.",
+              a: "It is thought that the plan will work",
+              tokens: ["It", "is", "thought", "that", "the", "plan", "will", "work"],
+              why: "It is thought that = on pense que."
+            },
+            {
+              type: "qcm",
+              q: "The CEO ___ to support the new strategy.",
+              options: ["is believed", "believes", "is believing", "believed"],
+              a: 0,
+              why: "Passif avec reporting verb : is believed to + infinitive."
+            },
+          ]
+        },
+        {
+          id: "en-b2-l4",
+          title: "Future forms review",
+          goal: "Choisir le bon futur selon le contexte.",
+          rule: "<strong>Will</strong> = décision spontanée / prédiction. <strong>Be going to</strong> = intention / prévision fondée sur un indice. <strong>Present continuous</strong> = arrangement fixe.",
+          examples: [
+            { t: "I will send you the report tomorrow.", fr: "Je vous enverrai le rapport demain." },
+            { t: "Look at the sky! It is going to rain.", fr: "Regarde le ciel ! Il va pleuvoir." },
+            { t: "We are launching the product next month.", fr: "Nous lançons le produit le mois prochain." },
+          ],
+          exercises: [
+            {
+              type: "qcm",
+              q: "I ___ send you the report tomorrow.",
+              options: ["will", "am going to", "am sending", "send"],
+              a: 0,
+              why: "Promesse/décision : will + base verbale."
+            },
+            {
+              type: "fill",
+              q: "We ___ (to launch) the product next month.",
+              a: ["are launching", "are going to launch"],
+              why: "Arrangement prévu : present continuous ou be going to."
+            },
+            {
+              type: "qcm",
+              q: "Look at the sky! It ___ rain.",
+              options: ["is going to", "will", "is raining", "rains"],
+              a: 0,
+              why: "Prévision fondée sur un indice visible : be going to."
+            },
+            {
+              type: "order",
+              q: "Remettez les mots dans l'ordre.",
+              a: "I will call you later",
+              tokens: ["I", "will", "call", "you", "later"],
+              why: "Will + base verbale pour une promesse future."
+            },
+            {
+              type: "fill",
+              q: "She ___ (to attend) the conference on Friday.",
+              a: ["is attending", "is going to attend"],
+              why: "Arrangement fixe : present continuous ou be going to."
+            },
           ]
         }
       ]
@@ -4693,6 +5063,98 @@ window.COURSES.en = {
             }
           ]
         }
+,        {
+          id: "en-c1-l3",
+          title: "Advanced inversion and emphasis",
+          goal: "Écrire de manière formelle et emphatique.",
+          rule: "Inversion after negative/restrictive openings: <strong>Not only..., Under no circumstances..., Had we known...</strong>. Auxiliary and subject swap places.",
+          examples: [
+            { t: "Had we known the risk, we would have acted sooner.", fr: "Si nous avions connu le risque, nous aurions agi plus tôt." },
+            { t: "Not only was the deadline missed, but the budget was exceeded.", fr: "Non seulement le délai a été dépassé, mais le budget aussi." },
+            { t: "Under no circumstances should you share the data.", fr: "En aucun cas vous ne devez partager les données." },
+          ],
+          exercises: [
+            {
+              type: "qcm",
+              q: "___ we known the risk, we would have acted sooner.",
+              options: ["Had", "If", "Were", "Should"],
+              a: 0,
+              why: "Inversion conditionnelle : Had + sujet + PP = If + sujet + had + PP."
+            },
+            {
+              type: "fill",
+              q: "Under no ___ should you share the data outside.",
+              a: ["circumstances"],
+              why: "Under no circumstances = en aucun cas, avec inversion."
+            },
+            {
+              type: "qcm",
+              q: "Not only ___ the deadline missed, but the budget was exceeded.",
+              options: ["was", "were", "did", "had"],
+              a: 0,
+              why: "Not only en tête : inversion, was the deadline."
+            },
+            {
+              type: "order",
+              q: "Remettez les mots dans l'ordre.",
+              a: "No sooner had we signed the contract",
+              tokens: ["No", "sooner", "had", "we", "signed", "the", "contract"],
+              why: "No sooner + had + sujet + PP."
+            },
+            {
+              type: "fill",
+              q: "___ had the announcement been made than the shares fell.",
+              a: ["No sooner"],
+              why: "No sooner … than = dès que … que."
+            },
+          ]
+        },
+        {
+          id: "en-c1-l4",
+          title: "Discourse markers for reports",
+          goal: "Structurer un rapport professionnel.",
+          rule: "Discourse markers link ideas: <strong>however</strong> (contrast), <strong>therefore / consequently</strong> (consequence), <strong>furthermore / moreover</strong> (addition), <strong>for instance</strong> (example).",
+          examples: [
+            { t: "The results were poor; therefore, we changed strategy.", fr: "Les résultats étaient mauvais ; par conséquent, nous avons changé de stratégie." },
+            { t: "The team worked overtime. Consequently, the project was finished on time.", fr: "L'équipe a travaillé supplémentaire. Par conséquent, le projet a été terminé à temps." },
+            { t: "Several options were considered; however, option B was chosen.", fr: "Plusieurs options ont été considérées ; cependant, l'option B a été choisie." },
+          ],
+          exercises: [
+            {
+              type: "qcm",
+              q: "The results were poor; ___, we decided to change strategy.",
+              options: ["however", "therefore", "furthermore", "moreover"],
+              a: 1,
+              why: "Conséquence logique : therefore (par conséquent)."
+            },
+            {
+              type: "fill",
+              q: "___ launching the product, we ran a pilot test.",
+              a: ["Before", "Prior to"],
+              why: "Avant une action : Before / Prior to + -ing."
+            },
+            {
+              type: "qcm",
+              q: "The team worked overtime. ___, the project was finished on time.",
+              options: ["Consequently", "However", "Nevertheless", "For instance"],
+              a: 0,
+              why: "Conséquence : Consequently (par conséquent)."
+            },
+            {
+              type: "order",
+              q: "Remettez les mots dans l'ordre.",
+              a: "In conclusion the project was a success",
+              tokens: ["In", "conclusion", "the", "project", "was", "a", "success"],
+              why: "In conclusion = pour conclure."
+            },
+            {
+              type: "fill",
+              q: "Several options were considered; ___, option B was chosen.",
+              a: ["however", "nevertheless"],
+              why: "Contraste : however / nevertheless (cependant)."
+            },
+          ]
+        }
       ]
     },
 
@@ -4790,6 +5252,100 @@ window.COURSES.en = {
               a: 1,
               why: "Carry out = réaliser, mener. Révision des phrasal verbs."
             }
+          ]
+        }
+,        {
+          id: "en-c2-l3",
+          title: "Ellipsis and substitution",
+          goal: "Éviter les répétitions dans un écrit formel.",
+          rule: "<strong>Ellipsis</strong> = omit words understood from context. <strong>Substitution</strong> = use one/ones, do so, the former/latter to avoid repetition.",
+          examples: [
+            { t: "The first proposal was expensive; the latter was reasonable.", fr: "La première proposition était chère ; la seconde était raisonnable." },
+            { t: "She did the report before the meeting, as she had promised.", fr: "Elle a fait le rapport avant la réunion, comme elle l'avait promis." },
+            { t: "We can do it ourselves, or we can have someone else do it.", fr: "Nous pouvons le faire nous-mêmes, ou faire faire par quelqu'un d'autre." },
+          ],
+          exercises: [
+            {
+              type: "qcm",
+              q: "The first proposal was expensive; the ___ was reasonable.",
+              options: ["latter", "latter one", "second", "last"],
+              a: 0,
+              why: "The latter = la seconde (de deux)."
+            },
+            {
+              type: "fill",
+              q: "The first option is better; the ___ is too costly.",
+              a: ["latter"],
+              why: "The latter = la seconde des deux options."
+            },
+            {
+              type: "qcm",
+              q: "She ___ the report before the meeting, as she had promised.",
+              options: ["did", "had", "was", "has"],
+              a: 0,
+              why: "Substitution : did = did the report (évite la répétition)."
+            },
+            {
+              type: "order",
+              q: "Remettez les mots dans l'ordre.",
+              a: "The first option is better than the second",
+              tokens: ["The", "first", "option", "is", "better", "than", "the", "second"],
+              why: "Comparatif avec the first / the second."
+            },
+            {
+              type: "fill",
+              q: "We can do it ourselves, or we can ___ someone else do it.",
+              a: ["have", "get"],
+              why: "Causatif : have/get + quelqu'un + base verbale."
+            },
+          ]
+        },
+        {
+          id: "en-c2-l4",
+          title: "Advanced business collocations",
+          goal: "Utiliser des collocations professionnelles avancées.",
+          rule: "Certain words naturally go together in business English: <strong>reach an agreement</strong>, <strong>draw a conclusion</strong>, <strong>raise concerns</strong>, <strong>let me know</strong>.",
+          examples: [
+            { t: "We need to reach an agreement with the supplier.", fr: "Nous devons parvenir à un accord avec le fournisseur." },
+            { t: "The auditor raised serious concerns about the accounts.", fr: "L'auditeur a soulevé de sérieuses préoccupations concernant les comptes." },
+            { t: "Please let me know if you need more details.", fr: "Tenez-moi au courant si vous avez besoin de plus de détails." },
+          ],
+          exercises: [
+            {
+              type: "qcm",
+              q: "We need to ___ an agreement with the supplier.",
+              options: ["reach", "make", "do", "take"],
+              a: 0,
+              why: "Reach an agreement = parvenir à un accord (collocation fixe)."
+            },
+            {
+              type: "qcm",
+              q: "The auditor ___ serious concerns about the accounts.",
+              options: ["raised", "lifted", "rose", "grew"],
+              a: 0,
+              why: "Raise concerns = soulever des inquiétudes."
+            },
+            {
+              type: "qcm",
+              q: "The company ___ a loss of €2 million last year.",
+              options: ["made", "suffered", "had", "took"],
+              a: 0,
+              why: "Make a loss = subir une perte (collocation fixe)."
+            },
+            {
+              type: "order",
+              q: "Remettez les mots dans l'ordre.",
+              a: "We need to draw a conclusion",
+              tokens: ["We", "need", "to", "draw", "a", "conclusion"],
+              why: "Draw a conclusion = tirer une conclusion."
+            },
+            {
+              type: "qcm",
+              q: "Please ___ me know if you need more details.",
+              options: ["let", "make", "have", "tell"],
+              a: 0,
+              why: "Let me know = tenez-moi au courant / informez-moi."
+            },
           ]
         }
       ]
